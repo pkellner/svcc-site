@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[7121,[],""]
 3:I[4581,[],""]
-4:I[9539,["500","static/chunks/500-b13bb91f5a6311b6.js","772","static/chunks/772-d840a7658edeaac1.js","652","static/chunks/app/(public-site)/layout-d2badfb1ee7f06ab.js"],"default"]
+4:I[9539,["500","static/chunks/500-b13bb91f5a6311b6.js","772","static/chunks/772-d840a7658edeaac1.js","652","static/chunks/app/(public-site)/layout-0ab5f4c392c6fd4c.js"],"default"]
 :HL["/svcc-site/_next/static/css/565f4925fe90494c.css","style"]
 5:T6cce,
 (function () {
@@ -43,9 +43,9 @@
   }
 })();
 8:X
-0:{"buildId":"0vMRKzBPlbD6rZTVHBGml","data":[{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","div",null,{"style":{"overflow":"hidden"},"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L4",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","div",null,{"className":"container-main p-4","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"children":"This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn't exist here, or the link may be out of date."}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]],["$L6"]]}]}]}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@9","rootVaryParams":null,"needsRuntimeRequest":"$@a"}
-:HL["/svcc-site/_next/static/css/2330da366021b816.css","style"]
-6:["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/2330da366021b816.css","precedence":"next"}]
+0:{"buildId":"i3c23U-9Ki6U3w_UAvQkw","data":[{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","div",null,{"style":{"overflowX":"clip"},"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L4",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","div",null,{"className":"container-main p-4","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"children":"This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn't exist here, or the link may be out of date."}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]],["$L6"]]}]}]}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@9","rootVaryParams":null,"needsRuntimeRequest":"$@a"}
+:HL["/svcc-site/_next/static/css/22702ba8e2465d1d.css","style"]
+6:["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next"}]
 8:300
 a:true
 8:C
