@@ -3,11 +3,12 @@
 3:I[4581,[],""]
 4:I[9539,["500","static/chunks/500-b13bb91f5a6311b6.js","772","static/chunks/772-d840a7658edeaac1.js","652","static/chunks/app/(public-site)/layout-0ab5f4c392c6fd4c.js"],"default"]
 :HL["/svcc-site/_next/static/css/565f4925fe90494c.css","style"]
-5:T6cca,
+5:T6ea2,
 (function () {
   var base = "/svcc-site";
   var path = window.location.pathname;
   if (base && path.indexOf(base + "/") === 0) path = path.slice(base.length);
+  var requested = path;
 
   function generateSlug(raw) {
     if (!raw) return "";
@@ -15,7 +16,7 @@
   }
 
   function go(to) {
-    if (to && to !== path) window.location.replace(base + to);
+    if (to && to !== requested) window.location.replace(base + to);
   }
 
   // /account/*, /login, /profile, /admin/* -> /
@@ -23,6 +24,11 @@
     go("/");
     return;
   }
+
+  // The old site matched the year token case-insensitively (/session/Campfire-1003 worked), so a
+  // capitalized year in an otherwise lowercase section is normalized and the other rules still run.
+  var ym = path.match(/^\/(session|presenter|track|sponsor|news|about|event)\/([^/]+)(\/.*)?$/);
+  if (ym && ym[2] !== ym[2].toLowerCase()) path = "/" + ym[1] + "/" + ym[2].toLowerCase() + (ym[3] || "");
 
   // Old capitalized /Session/... or /Presenter/... (YouTube description links) -> lowercase
   if (/^\/(Session|Presenter)\//.test(path)) {
@@ -39,11 +45,14 @@
     var year = m[1], namePart = m[2], id = m[3];
     try { namePart = decodeURIComponent(namePart); } catch (e) {}
     var slug = slugById[id] || generateSlug(namePart) + "-" + id;
-    go("/presenter/" + year + "/" + slug + "/");
+    go("/presenter/" + year.toLowerCase() + "/" + slug + "/");
+    return;
   }
+
+  go(path);
 })();
 a:X
-0:{"buildId":"rrvoq4GTPwmHrki4shjEf","data":[{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","div",null,{"style":{"overflowX":"clip"},"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L4",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","div",null,{"className":"container-main p-4","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"children":"This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn't exist here, or the link may be out of date."}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]],["$L6"]]}]}],["$L7","$L8"]]}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@b","rootVaryParams":null,"needsRuntimeRequest":"$@c"}
+0:{"buildId":"wzOjkBJU-4J9jbgoGUKyr","data":[{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","div",null,{"style":{"overflowX":"clip"},"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L4",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","div",null,{"className":"container-main p-4","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"children":"This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn't exist here, or the link may be out of date."}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}]],["$L6"]]}]}],["$L7","$L8"]]}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@b","rootVaryParams":null,"needsRuntimeRequest":"$@c"}
 d:I[2593,["177","static/chunks/app/layout-c2b705df931cb253.js"],""]
 :HL["/svcc-site/_next/static/css/22702ba8e2465d1d.css","style"]
 6:["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next"}]

@@ -10,15 +10,16 @@ e:I[484,[],"MetadataBoundary"]
 :HL["/svcc-site/_next/static/css/565f4925fe90494c.css","style"]
 :HL["/svcc-site/_next/static/css/22702ba8e2465d1d.css","style"]
 b:X
-0:{"P":null,"c":["","event","2006",""],"q":"","i":false,"f":[[["",{"children":["(public-site)",{"children":["event",{"children":[["year","2006","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","div",null,{"style":{"overflowX":"clip"},"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$L4",[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],[["$","$L5",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-WW0GQXPPWK"}],["$","$L5",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-WW0GQXPPWK');\n"}}]]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,null]},null,false,"$b"]},null,false,"$b"]},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$Ld"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Lf"}]}]}],null]}],false]],"m":"$undefined","G":["$10",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"rrvoq4GTPwmHrki4shjEf"}
+0:{"P":null,"c":["","event","2006",""],"q":"","i":false,"f":[[["",{"children":["(public-site)",{"children":["event",{"children":[["year","2006","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/565f4925fe90494c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","div",null,{"style":{"overflowX":"clip"},"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$L4",[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],[["$","$L5",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-WW0GQXPPWK"}],["$","$L5",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-WW0GQXPPWK');\n"}}]]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/svcc-site/_next/static/css/22702ba8e2465d1d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,null]},null,false,"$b"]},null,false,"$b"]},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$Ld"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Lf"}]}]}],null]}],false]],"m":"$undefined","G":["$10",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"wzOjkBJU-4J9jbgoGUKyr"}
 13:I[9539,["500","static/chunks/500-b13bb91f5a6311b6.js","772","static/chunks/772-d840a7658edeaac1.js","652","static/chunks/app/(public-site)/layout-0ab5f4c392c6fd4c.js"],"default"]
 b:C
 7:["$L11","$L12"]
-14:T6cca,
+14:T6ea2,
 (function () {
   var base = "/svcc-site";
   var path = window.location.pathname;
   if (base && path.indexOf(base + "/") === 0) path = path.slice(base.length);
+  var requested = path;
 
   function generateSlug(raw) {
     if (!raw) return "";
@@ -26,7 +27,7 @@ b:C
   }
 
   function go(to) {
-    if (to && to !== path) window.location.replace(base + to);
+    if (to && to !== requested) window.location.replace(base + to);
   }
 
   // /account/*, /login, /profile, /admin/* -> /
@@ -34,6 +35,11 @@ b:C
     go("/");
     return;
   }
+
+  // The old site matched the year token case-insensitively (/session/Campfire-1003 worked), so a
+  // capitalized year in an otherwise lowercase section is normalized and the other rules still run.
+  var ym = path.match(/^\/(session|presenter|track|sponsor|news|about|event)\/([^/]+)(\/.*)?$/);
+  if (ym && ym[2] !== ym[2].toLowerCase()) path = "/" + ym[1] + "/" + ym[2].toLowerCase() + (ym[3] || "");
 
   // Old capitalized /Session/... or /Presenter/... (YouTube description links) -> lowercase
   if (/^\/(Session|Presenter)\//.test(path)) {
@@ -50,8 +56,11 @@ b:C
     var year = m[1], namePart = m[2], id = m[3];
     try { namePart = decodeURIComponent(namePart); } catch (e) {}
     var slug = slugById[id] || generateSlug(namePart) + "-" + id;
-    go("/presenter/" + year + "/" + slug + "/");
+    go("/presenter/" + year.toLowerCase() + "/" + slug + "/");
+    return;
   }
+
+  go(path);
 })();
 4:[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L13",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","div",null,{"className":"container-main p-4","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"children":"This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn't exist here, or the link may be out of date."}]]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$14"}}]]
 6:[["$","header",null,{"className":"header","children":["$","div",null,{"className":"container-main","children":["$","$L13",null,{"year":"campfire-1003","validYears":["campfire-1003","campfire-1002","campfire-1001","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006"]}]}]}],["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]
