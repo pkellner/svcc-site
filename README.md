@@ -4,7 +4,7 @@ An archive of the Silicon Valley Code Camp (SVCC) website: every year from 2006 
 
 | | |
 |---|---|
-| Live test site | https://pkellner.github.io/svcc-site/ |
+| Live archive | https://pkellner.github.io/svcc-site/ |
 | This repo (public) | `pkellner/svcc-site`, branch `gh-pages`: the built site plus this README, nothing else |
 | **Source repo (private)** | **`pkellner/course-svcc-speaker-sessions-nextjs13`**, branch `github-pages-no-auth` |
 | Original live site | https://www.siliconvalley-codecamp.com |
@@ -13,7 +13,7 @@ The site you see here is generated. The source code, the export script, the plan
 
 ## What this is, in one paragraph
 
-SVCC ran for years as a Next.js 16 application backed by MySQL (through Prisma), Redis caching, next-auth logins, an admin area and some API routes. The event is over, so the site is being retired to a read-only archive that costs nothing to host and can't be hacked or break. This is done by a **one-time export of the database to JSON files**, a **data layer that reads those files instead of the database**, and a **static build (`next build` with `output: "export"`)** that turns every page into a file. The result is published to GitHub Pages now, and later to the real domain.
+SVCC ran for years as a Next.js 16 application backed by MySQL (through Prisma), Redis caching, next-auth logins, an admin area and some API routes. The event is over, so the site is being retired to a read-only archive that costs nothing to host and can't be hacked or break. This is done by a **one-time export of the database to JSON files**, a **data layer that reads those files instead of the database**, and a **static build (`next build` with `output: "export"`)** that turns every page into a file. The result is published to GitHub Pages at `pkellner.github.io/svcc-site/`. It stays there; there is no move to a custom domain (decided 2026-10-05).
 
 ## Theory of operation
 
@@ -43,7 +43,7 @@ The original pages are React server components that ask a data layer (`src/lib/p
         |  npm run test:gh-pages:local   (checks every link and reference)
         |  npm run deploy:gh-pages       (pushes out/ to this repo's gh-pages branch)
         v
- GitHub Pages  ->  later, the real domain on a static host
+ GitHub Pages (pkellner.github.io/svcc-site/)
 ```
 
 After the export, the database can be shut off. The build and the deployed site never touch it.
@@ -86,7 +86,7 @@ This is the full recipe, in the order it was carried out. Each step names the pr
 
 17. **Verify the live site.** After deploying, `npm run test:gh-pages` fetches every page from the live site and compares it byte-for-byte with `out/`, and `npm run test:gh-pages:browser` loads all 3,900 pages in a headless browser, failing on console errors, failed requests or broken images (12,800+ images rendered in the last full run).
 
-18. **Cut over to the real domain (not done yet).** Build with `npm run build:static` (no base path), publish with a `CNAME` file, stage on a subdomain first, then move the `www` DNS record. The old server and database are decommissioned only after the new site has been checked. The checklist is in the private repo's plan.
+18. **No custom domain.** The archive stays on `pkellner.github.io/svcc-site/` (decided 2026-10-05). The root build (`npm run build:static`) and a `PAGES_CNAME` deploy remain possible, and the reviewed checklist is in the private repo's plan, but they are not planned.
 
 ### Why not crawl the live site instead?
 
@@ -143,7 +143,7 @@ From `web/` in the private repo, with a local copy of the database and `web/.env
 ```bash
 npm ci
 npm run export-data           # database -> JSON and images
-npm run build:gh-pages        # or build:static for the real domain
+npm run build:gh-pages        # basePath /svcc-site
 npm run test:gh-pages:local   # check out/ before publishing
 npm run deploy:gh-pages       # publish to this repo
 npm run test:gh-pages         # check the live site matches
@@ -154,6 +154,6 @@ The full runbook, including the optional materials-link re-check and common chan
 ## Limits and notes
 
 - **Content is frozen.** There are no forms, registration, comments or search; the contact form and logins were removed. External links (speaker sites, session materials) may rot. About 70 inherited dead links exist that were already dead on the original site.
-- **Site size.** The built site is about 810 MB across 25,000 files, close to GitHub Pages' recommended 1 GB limit. Most of the bulk is per-page data files that Next writes beside each page. A real static host has no such limit.
+- **Site size.** The built site is about 870 MB across 25,000 files, close to GitHub Pages' recommended 1 GB limit. Most of the bulk is per-page data files that Next writes beside each page. A real static host has no such limit.
 - **Analytics.** Pages load Google Analytics (measurement id hardcoded, because a static build has no runtime environment).
-- **Search engines.** The test site on `github.io` is a stand-in; the production archive belongs on the real domain with its sitemap.
+- **Search engines.** `sitemap.xml` and `og:image` still use absolute `https://www.siliconvalley-codecamp.com` URLs, and a `robots.txt` under `/svcc-site/` is ignored by crawlers, so search engines find the archive only through links to it.
