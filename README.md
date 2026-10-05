@@ -154,6 +154,6 @@ The full runbook, including the optional materials-link re-check and common chan
 ## Limits and notes
 
 - **Content is frozen.** There are no forms, registration, comments or search; the contact form and logins were removed. External links (speaker sites, session materials) may rot. About 70 inherited dead links exist that were already dead on the original site.
-- **Site size.** The built site is about 870 MB across 25,000 files, close to GitHub Pages' recommended 1 GB limit. Most of the bulk is per-page data files that Next writes beside each page. A real static host has no such limit.
+- **Site size.** The built site is about 445 MB across 25,000 files, under GitHub Pages' recommended 1 GB limit. Most of the bulk is per-page data files that Next writes beside each page. Anything rendered by the root `not-found.tsx` is repeated in about 15,700 of them, which is why the 404 recovery script is served as `404-recover.js` rather than inline. A real static host has no such limit.
 - **Analytics.** Pages load Google Analytics (measurement id hardcoded, because a static build has no runtime environment).
 - **Search engines.** `sitemap.xml` and `og:image` still use absolute `https://www.siliconvalley-codecamp.com` URLs, and a `robots.txt` under `/svcc-site/` is ignored by crawlers, so search engines find the archive only through links to it.
