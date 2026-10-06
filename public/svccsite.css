@@ -1,0 +1,72 @@
+.large {
+    padding: 50px
+}
+.cardwidth {
+    width: 20rem;
+}
+.margintopbottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.margintopbottom10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cardmin {
+    min-width: 300px;
+}
+
+.strokeme {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+.heartredbutton
+{
+    background-image:  url('heart-red.png');
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.heartdarkbutton
+{
+    background-image:  url('heart-dark.png');
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.heartmouseover
+{
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.listmouseover
+{
+    cursor: pointer;
+}
+
+.waitcursor
+{
+    cursor: wait;
+}
+
+.fa-heart {
+    color: red;
+}
+
+.fa-heart-o {
+    color: gray;
+}

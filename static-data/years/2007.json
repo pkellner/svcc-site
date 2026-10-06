@@ -1,0 +1,31 @@
+{
+  "id": 2,
+  "urlPostToken": "2007",
+  "sessions": [],
+  "sessionSlugs": [],
+  "trackSlugs": [],
+  "tracks": [],
+  "trackSessions": {},
+  "codeCampYearRec": {
+    "id": 2,
+    "name": "Silicon Valley Code Camp 2007",
+    "hostName": "www.siliconvalley-codecamp.com",
+    "codeCampDateString": "September 2007",
+    "locationName": "",
+    "city": "",
+    "state": "",
+    "campEndDate": "2007-10-16T00:00:00.000Z",
+    "campStartDate": "2007-10-15T00:00:00.000Z",
+    "year": "2007"
+  },
+  "configDataDict": {
+    "ShowAgendaOnSchedule": "true",
+    "ShowRoomOnSchedule": "true",
+    "ShowSessionInterest": "false",
+    "ShowSessionInterestCount": "false",
+    "ShowSessionPlanAhead": "false",
+    "ShowSessionPlanAheadCount": "false"
+  },
+  "uniquePresenters": [],
+  "sponsors": []
+}

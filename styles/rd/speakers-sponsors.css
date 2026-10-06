@@ -1,0 +1,71 @@
+/* REDESIGN-PLAN.md: section styles (speakers-sponsors). rd- prefixed classes only. */
+
+/* the year chip holds the long event name (campfires): let it wrap at phone width */
+.rd-chip.rd-chip--wrap { white-space: normal; max-width: 100%; line-height: 1.35; }
+
+/* ---------- speaker list ---------- */
+.rd-spk-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; justify-content: space-between; margin-bottom: 30px; }
+.rd-spk-search { position: relative; flex: 1 1 260px; max-width: 520px; min-width: 0; }
+.rd-spk-search .rd-input { padding-left: 44px; }
+.rd-spk-search .fa { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--rd-ink-2); }
+.rd-spk-grid { margin: 0; padding: 0; list-style: none; }
+.rd-spk-card { display: flex; align-items: center; gap: 16px; height: 100%; }
+.rd-spk-card > div { min-width: 0; }
+.rd-spk-grid > li:nth-child(4n+1) .rd-spk-card { rotate: -0.6deg; }
+.rd-spk-grid > li:nth-child(4n+3) .rd-spk-card { rotate: 0.5deg; }
+.rd-spk-grid > li .rd-spk-card:hover { rotate: 0deg; }
+.rd-spk-card .rd-avatar { width: 84px; height: 84px; }
+.rd-spk-name { margin: 0; font-family: var(--rd-display); font-weight: 700; font-size: 1.05rem; line-height: 1.15; letter-spacing: -0.03em; overflow-wrap: anywhere; }
+.rd-spk-meta { margin: 4px 0 0; font-size: 0.92rem; color: var(--rd-ink-2); overflow-wrap: anywhere; line-height: 1.35; }
+.rd-spk-card .rd-tags { margin-top: 10px; gap: 6px; }
+.rd-spk-card .rd-tag { font-size: 0.7rem; padding: 3px 8px; box-shadow: 2px 2px 0 var(--rd-ink); }
+.rd-spk-card .rd-tag img { width: 14px; height: 14px; align-self: center; }
+
+/* ---------- speaker detail ---------- */
+.rd-spk-head { display: flex; flex-wrap: wrap; align-items: center; gap: 22px 32px; }
+.rd-spk-head > div { min-width: 0; flex: 1 1 260px; }
+.rd-spk-head .rd-avatar--lg { rotate: -3deg; }
+.rd-spk-head .rd-h1 { overflow-wrap: anywhere; }
+.rd-spk-head .rd-sub { margin-top: 10px; font-weight: 700; }
+.rd-spk-social { margin-top: 20px; }
+.rd-spk-social .rd-btn img { width: 16px; height: 16px; }
+.rd-spk-body { display: grid; gap: clamp(36px, 5vw, 56px); }
+.rd-spk-sessions { margin: 0; padding: 0; list-style: none; }
+.rd-spk-session .rd-h3 { overflow-wrap: anywhere; }
+.rd-spk-session .rd-h3 a { text-decoration: none; }
+.rd-spk-session .rd-h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.rd-spk-session .rd-tags { margin-top: 12px; }
+.rd-spk-session .rd-prose { margin-top: 14px; }
+.rd-spk-session-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 16px; font-size: 0.95rem; }
+.rd-spk-session-foot a { overflow-wrap: anywhere; }
+
+/* ---------- sponsors: the prototype's pile of logo stickers, static ---------- */
+.rd-sp-tier .rd-section-title { justify-content: center; text-align: center; margin-bottom: clamp(26px, 4vw, 44px); }
+.rd-sp-pile { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 16px; margin: 0; padding: 0; list-style: none; }
+.rd-sp-logo {
+  --w: clamp(112px, 14vw, 166px); --h: clamp(74px, 9vw, 104px);
+  position: relative; display: block; width: var(--w); height: var(--h); padding: 12px 14px;
+  background: var(--rd-paper); border: 2px solid var(--rd-ink); border-radius: 18px; box-shadow: 4px 4px 0 var(--rd-ink);
+  transition: transform 0.5s var(--rd-ease);
+}
+.rd-sp-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.rd-sp-pile--l .rd-sp-logo { --w: clamp(148px, 19vw, 224px); --h: clamp(90px, 11.4vw, 132px); }
+.rd-sp-pile--s .rd-sp-logo { --w: clamp(94px, 11vw, 130px); --h: clamp(62px, 7.4vw, 86px); }
+.rd-sp-pile > li:nth-child(4n+1) .rd-sp-logo { transform: rotate(-4deg); }
+.rd-sp-pile > li:nth-child(4n+2) .rd-sp-logo { transform: rotate(3deg) translateY(8px); }
+.rd-sp-pile > li:nth-child(4n+3) .rd-sp-logo { transform: rotate(-1.5deg) translateY(-6px); }
+.rd-sp-pile > li:nth-child(4n) .rd-sp-logo { transform: rotate(5deg); }
+.rd-sp-pile > li:nth-child(7n) .rd-sp-logo { transform: rotate(-7deg) translateY(9px); }
+.rd-sp-pile > li .rd-sp-logo:hover { transform: rotate(0) scale(1.08); z-index: 2; }
+.rd-sp-contact { text-align: center; }
+.rd-sp-contact p { margin: 10px auto 0; max-width: 60ch; }
+.rd-sp-contact a { overflow-wrap: anywhere; font-weight: 800; }
+.rd-sp-lede { font-weight: 700; }
+
+@media (max-width: 480px) {
+  .rd-spk-card .rd-avatar { width: 64px; height: 64px; }
+  .rd-spk-head .rd-avatar--lg { width: 104px; height: 104px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rd-sp-logo { transition: none; }
+}

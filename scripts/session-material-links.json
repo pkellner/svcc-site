@@ -1,0 +1,2472 @@
+{
+  "checkedAt": "2026-10-01",
+  "results": {
+    "/Session/2017/clean-code---the-art-of-decoupling": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Silicon Valley Code Camp"
+    },
+    "a": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "bit.ly/AMPCorgi": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://bit.ly/AMPCorgi"
+    },
+    "go.gayle.com/pmprepslides": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "http://1drv.ms/1FVRtGk": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/1jfZegz": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/1Le9LDi": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/1tDGDhU": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/1xO8euT": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/1Z51ZS3": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://1drv.ms/b/s!AtKyZDU97Im7hI1bLPQrSjF5UfLDmA": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://actuationconsultingllc.com/whitepaper_request_2013.php": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 Not Found"
+    },
+    "http://agileunlimited.com/WorkshopMaterials/FantasticFeatures/FantasticFeatures.zip": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://alternatestack.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://angular.io": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://appinventor.mit.edu/explore/ai2/paintpot-part1.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://auze.ro/auth-angularu": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://auze.ro/auth-angularu"
+    },
+    "http://banzor.us/?p=70": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://banzor.us/?p=70"
+    },
+    "http://bit.ly/179IZne": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://bit.ly/1JizhBP": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/1p9bNq4": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://bit.ly/1p9bNq4"
+    },
+    "http://bit.ly/1rtvMPZ": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 - Content not found"
+    },
+    "http://bit.ly/1TnyWsF": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/1wubABX": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/1ypxwlq": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://bit.ly/2fVrJQU": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://bit.ly/2MSSNAk": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/2pFHovz": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/ARDUINO-2015-SVCC": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://bit.ly/ARDUINO1": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://bit.ly/ARDUINO2": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://bit.ly/BusinessWPF": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Dropbox - 404"
+    },
+    "http://bit.ly/codecamp14-gamemaker": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/FineArtJSEvents": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/fpj1svcc2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/full-stack-web-perf": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Bitly | Link Deactivated | 410"
+    },
+    "http://bit.ly/iFleksySDK_SVCC": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/IPBasics2015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/mssvcc2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/sparkTimeTalk": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://bit.ly/SQUISHY": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/svcc-2019-realish": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/svcc-d3": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/svcc-gwg": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/token-sec-svcc": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://bit.ly/webperformancetests": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Dropbox - 404"
+    },
+    "http://bizfabrik.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://bizfabrik.com/"
+    },
+    "http://blog.plaira.io/interfacing-lua-c/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://blogs.msdn.com/b/alicerp/archive/2011/10/08/code-camp-slides-from-build-a-wordpress-blog-and-photo-gallery-site-in-60-minutes-posted.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.msdn.com/b/bethmassi/archive/2013/10/08/trip-report-silicon-valley-code-camp.aspx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 - Content not found"
+    },
+    "http://blogs.msdn.com/b/dorischen/archive/2013/10/16/developing-high-performance-websites-and-modern-apps-with-javascript-and-html5.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.msdn.com/b/dorischen/archive/2013/10/16/what-web-developers-need-to-know-to-develop-native-html5-javascript-apps.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.msdn.com/b/dorischen/archive/2015/06/25/my-presentation-at-angularu-conference-angular-go-mobile.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.msdn.com/b/dorischen/archive/2015/10/23/building-web-sites-that-work-everywhere.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.msdn.com/b/onenotedev/archive/2014/10/13/onenoteapisvcc.aspx": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://blogs.rti.com/2014/04/09/reactive-programming-using-rx4dds/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://carstenjacobsen.com/SVCC_CarstenJacobsen.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://channel9.msdn.com/Events/Build/2014/3-573": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://christianwade.wordpress.com/2013/08/20/currency-conversion-in-ssas-2012-multidimensional-tabular/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found | Christian Wade's Blog"
+    },
+    "http://clear-lines.com/blog/post/Silicon-Valley-Code-Camp-material.aspx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub Pages"
+    },
+    "http://cppnow.org/session/fun-with-tuples/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found – C++Now"
+    },
+    "http://crockford.com/pp/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://crockford.com/pp/closure.ppt": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://crockford.com/pp/problems.ppt": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 NOT FOUND"
+    },
+    "http://csharp-lighthouse.com/": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://csharp-lighthouse.com/"
+    },
+    "http://demian.io": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://dev.twitter.com": {
+      "verdict": "dead",
+      "status": 520,
+      "detail": "twitter.com | 520: Web server is returning an unknown error"
+    },
+    "http://developer.linkedinlabs.com/tutorials/svcc/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404: Not Found"
+    },
+    "http://dl.dropboxusercontent.com/u/2205101/SVCC_upload.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Dropbox - 404"
+    },
+    "http://docs.google.com/presentation/d/1qlcIAia-Wvk_Q2amWlFCIqZCvtgDo6GhbBIFX2fNQGU/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://docs.google.com/presentation/d/1r6OdLhgRcO4V5uyANlpcX0ML115_Xpf1cV-6g9AknZM": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://dotnettips.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://dotnettips.wordpress.com/2013/09/20/silicon-valley-code-camp-2013/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://drive.google.com/file/d/0B0pf8XTLeSiKdHdMVzNTOE05aEE/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://drive.google.com/file/d/0B4bUwOrW2pFdUy1ZZ0NPTTZEb1k/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://drive.google.com/file/d/0B7LIdu29tPZRSDd5S0wwbmxGNFk/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://drive.google.com/file/d/0BxT4IOU-1YayR1VVODJXTzdfQ3c/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "http://drive.google.com/open?id=0B-g6A1JdzeOuN1NYeExiTUktaUU": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Error 404 (Not Found)!!1"
+    },
+    "http://drive.google.com/open?id=0ByDdRNpXd5r9SEVXbW1TN2FzVTA": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Error 404 (Not Found)!!1"
+    },
+    "http://drive.google.com/open?id=1AusdStVhBLCVgX6PkUcV2E29m0nWYYTexz6tgsOB77o": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://emberjs.com/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://exceptionsafecode.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://exceptionsafecode.com/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://exceptionsafecode.com/slides/svcc/2013/CodeCamp_MarmaladeCPP_2013.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://exceptionsafecode.com/slides/svcc/2013/shared_ptr.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://forums.xamarin.com/discussion/12954": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://fryerblog.com/post/99933007601/net-distributed-caching": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://futureLiving.info": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/ajryan/CodeCamp2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/antonyross/SVCC-2017-Presentation-Slides": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/asimX/APIConnect-Loopback-basics": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/CDSLab/Codecamp2015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/DeborahK/SVCC-2015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/echuvyrov/SparkOnAzure": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/enright/arrowlets": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/gianpiero/gianpiero.github.io/raw/master/slides/SVCC2015-GianpieroNapoli.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/iroy2000/backbone-tutorial": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/jldeen/SVCC-AzureMgmtxplat": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/jldeen/SVCC-BashW10": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/saraford/psychology-dev-tool-usability": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/SidneyAllen/backbonejs-stackmob-workshop": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://github.com/synedra/docker-demo": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "http://github.com/TobiahM/ProximityDemo/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://go.gayle.com/codingprep": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://go.gayle.com/interviewinglikegoogle": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://goo.gl/4pcYrT": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://goo.gl/aBjuDf?": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/B4ShWK": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/b4sUIZ": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/lFbQHR": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/QUnzwN": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/TGCm8q": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/wqWm1H": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://goo.gl/ZF4SDg": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://hashtagfail.com/post/63364483077/svcc13": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://https://1drv.ms/f/s!AIXD5g8lRKKSj48G": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://1drv.ms/f/s!AIXD5g8lRKKSj48G"
+    },
+    "http://https://1drv.ms/f/s!ArtNt2j9rxvUlHAz-cHs3t_8gafP": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://1drv.ms/f/s!ArtNt2j9rxvUlHAz-cHs3t_8gafP"
+    },
+    "http://https://archive.org/details/api_design": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://archive.org/details/api_design"
+    },
+    "http://https://dl.dropboxusercontent.com/u/313565755/SVCC-TablesCant.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Dropbox - 404"
+    },
+    "http://https://docs.google.com/file/d/0B5cbkX4JXBK0Mnl2ZmlYMUhMZ0E/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://docs.google.com/file/d/0B5cbkX4JXBK0Mnl2ZmlYMUhMZ0E/edit?usp=sharing"
+    },
+    "http://https://docs.google.com/presentation/d/14zCNH-y0_-auNgQZS0cY4V2t4zh7rNHMCEuGg_yGhvU/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://docs.google.com/presentation/d/14zCNH-y0_-auNgQZS0cY4V2t4zh7rNHMCEuGg_yGhvU/edit?usp=sharing"
+    },
+    "http://https://docs.google.com/presentation/d/1CsDIEuvAZlBwYaVDqDPSk9RbcDdseOZ4s6KAJrVwnww": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://docs.google.com/presentation/d/1CsDIEuvAZlBwYaVDqDPSk9RbcDdseOZ4s6KAJrVwnww"
+    },
+    "http://https://docs.google.com/presentation/d/1Lyvu4Bsn6hd2GsKpL8Kc74InDzxGQeUUvGtZKWFfDEE/pub?start=false&loop=false&delayms=3000": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://docs.google.com/presentation/d/1Lyvu4Bsn6hd2GsKpL8Kc74InDzxGQeUUvGtZKWFfDEE/pub?start=false&loop=false&delayms=3000"
+    },
+    "http://https://docs.google.com/presentation/d/1r29_2iunzdCSv0ImoGVR07FSq9ByHBlo62vvCazeZd4/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://docs.google.com/presentation/d/1r29_2iunzdCSv0ImoGVR07FSq9ByHBlo62vvCazeZd4/edit?usp=sharing"
+    },
+    "http://https://drive.google.com/file/d/0B4k_P472xo72ckdiS2JOdXF5ek0/view?usp=sharing": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://drive.google.com/file/d/0B4k_P472xo72ckdiS2JOdXF5ek0/view?usp=sharing"
+    },
+    "http://https://drive.google.com/folderview?id=0B0IIIHVDrY1pRzU4SmJaUkF6bnM&usp=sharing": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://drive.google.com/folderview?id=0B0IIIHVDrY1pRzU4SmJaUkF6bnM&usp=sharing"
+    },
+    "http://https://drive.google.com/open?id=0B8-tWop8kJcAVVl5VVlTRWJCd1E": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Error 404 (Not Found)!!1"
+    },
+    "http://https://github.com/antonyross/SVCC_ML_Presentation_Slides": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/antonyross/SVCC_ML_Presentation_Slides"
+    },
+    "http://https://github.com/CppCon/CppCon2015/tree/master/Presentations/Beyond%20Sanitizers": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/CppCon/CppCon2015/tree/master/Presentations/Beyond%20Sanitizers"
+    },
+    "http://https://github.com/cybergen/shader-talk": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/cybergen/shader-talk"
+    },
+    "http://https://github.com/dgoldie/elixir_workshop": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/dgoldie/elixir_workshop"
+    },
+    "http://https://github.com/JoeMayo/BotDemos": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/JoeMayo/BotDemos"
+    },
+    "http://https://github.com/jpoon/vscode-typewriter": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/jpoon/vscode-typewriter"
+    },
+    "http://https://github.com/mathias-brandewinder/Presentations": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/mathias-brandewinder/Presentations"
+    },
+    "http://https://github.com/mathias-brandewinder/Presentations/tree/master/fsharp-for-csharp-devs": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/mathias-brandewinder/Presentations/tree/master/fsharp-for-csharp-devs"
+    },
+    "http://https://github.com/organicit/svcc-2017": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/organicit/svcc-2017"
+    },
+    "http://https://github.com/phatboyg/MassTransitDemo": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "http://https://github.com/TobiahZ/CtrlZforGit": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://github.com/TobiahZ/CtrlZforGit"
+    },
+    "http://https://goo.gl/DE5QsL": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://https://nightbird.blob.core.windows.net/svcc-2016/StorageSecurity.pptx": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://nightbird.blob.core.windows.net/svcc-2016/"
+    },
+    "http://https://onedrive.live.com/redir?page=view&resid=54463F83B6428896!1671&authkey=!ABGb4rExlCc4FTs": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://onedrive.live.com/redir?page=view&resid=54463F83B6428896!1671&authkey=!ABGb4rExlCc4FTs"
+    },
+    "http://https://samsclass.info": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://samsclass.info"
+    },
+    "http://https://speakerdeck.com/ariya/the-future-of-javascript-language-tooling": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://speakerdeck.com/ariya/the-future-of-javascript-language-tooling"
+    },
+    "http://https://speakerdeck.com/scottksmith95/web-security-in-node-dot-js-applications": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://speakerdeck.com/scottksmith95/web-security-in-node-dot-js-applications"
+    },
+    "http://https://www.dropbox.com/s/8spsm9ktbp3pzwv/Database_Unit_Testing_Fundamentals_TheSQLGuru.zip?dl=0": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.dropbox.com/s/8spsm9ktbp3pzwv/Database_Unit_Testing_Fundamentals_TheSQLGuru.zip?dl=0"
+    },
+    "http://https://www.dropbox.com/s/jusvjnuxegy8him/Silicon.Valley.Codecamp.2015.v1.pdf?dl=0": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.dropbox.com/s/jusvjnuxegy8him/Silicon.Valley.Codecamp.2015.v1.pdf?dl=0"
+    },
+    "http://https://www.dropbox.com/s/k6x17tmzodqr0yw/Planning%20Report%20Design.pdf": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.dropbox.com/s/k6x17tmzodqr0yw/Planning%20Report%20Design.pdf"
+    },
+    "http://https://www.slideshare.net/lobster1234/building-apis-in-scala-with-playframework2": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.slideshare.net/lobster1234/building-apis-in-scala-with-playframework2"
+    },
+    "http://https://www.slideshare.net/secret/GBsmbLfcfTLjIG": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.slideshare.net/secret/GBsmbLfcfTLjIG"
+    },
+    "http://https://www.sublimetext.com; https://notepad-plus-plus.org": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "http://https://youmetalk.com/svcc": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "Timeout 30000ms exceeded."
+    },
+    "http://ibm.biz/roomba-meets-watson": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://interviewkickstart.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://InterviewKickstart.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://j.mp/1OiFdmf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "User Not Found - Speaker Deck"
+    },
+    "http://j.mp/1VvNAz5": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "User Not Found - Speaker Deck"
+    },
+    "http://jerrynixon.com": {
+      "verdict": "dead",
+      "status": 520,
+      "detail": "twitter.com | 520: Web server is returning an unknown error"
+    },
+    "http://jessicadeen.com/public/_MSFT%20DevOps%20OS.pptx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Azure Static Web Apps - 404: Not found"
+    },
+    "http://jessicadeen.com/wp-content/uploads/2017/10/CICD-DevOps1.pptx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Azure Static Web Apps - 404: Not found"
+    },
+    "http://johnknapp.com/2013/10/silicon-valley-codecamp-deck/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found – John Knapp"
+    },
+    "http://jsbin.com/pijubo/10/edit": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Just a moment..."
+    },
+    "http://json.org": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://kloobok.com/index.php?option=com_content&view=article&id=105&Itemid=91": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://kloobok.com/index.php?option=com_content&vi"
+    },
+    "http://kruszka.com/external_refs/2014_svcc/SVCC_2014-10-12_Kruszka.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://langintro.com/clojurescript/svcc/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://lightningdart.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://lightningdart.com/"
+    },
+    "http://livi.link/svcc2015": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "403 Forbidden"
+    },
+    "http://metaneer.com/svcc15": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "MetaNeer Labs"
+    },
+    "http://minecraftmodding.org": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://mlavi.github.io/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://mlavi.github.io/post/devops_demystified/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://msdn.microsoft.com/en-us/magazine/dn781356.aspx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://msmvps.com/blogs/deborahk/archive/2011/10/15/silicon-valley-code-camp-2011.aspx": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "Timeout 30000ms exceeded."
+    },
+    "http://mysqlblog.fivefarmers.com/2011/10/09/connectorj-presentation-at-javaone-and-svcc/": {
+      "verdict": "dead",
+      "status": 500
+    },
+    "http://neverindoubtnet.blogspot.com/2011/10/windows-8-metro-apps-in-javascript.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://ng-guide.com/angularjs-talk/": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://ng-guide.com/angularjs-talk/"
+    },
+    "http://nightbird.blob.core.windows.net/svcc-2017/RobinShahan_SVCC_2017_Functions.zip": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://nightbird.blob.core.windows.net/svcc-2017/R"
+    },
+    "http://online-sales-marketing.com/sales/svcc-2013": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found - Spectrum Group Online"
+    },
+    "http://openui5.org": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://prezi.com/qagwbdnmn6bv/?utm_campaign=share&utm_medium=copy&rc=ex0share": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://prodigies.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://proppy-go-ae.appspot.com": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 Page not found"
+    },
+    "http://qualitycoding.org/talk/svcc-2017/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 - Page not found | Quality Coding"
+    },
+    "http://react-typescript-tdd.firebaseapp.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://research.microsoft.com/en-us/projects/kodu/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://rk-logix.com/presentations/2015_10_03_svcc.pdf": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_CERT_DATE_INVALID at http://rk-logix.com/presentations/2015_10_03_svcc."
+    },
+    "http://rmalla.svbtle.com/silicon-valley-code-camp-2014-presentation": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://robertfelten.com/wp-content/uploads/2013/10/QtContainers.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://ryanjarvinen.com/presentations/getting_RESTless/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://samsclass.info/seminars/Code-Camp-100513-Breaches-Hashes.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://schechter.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://scottksmith.com/speaking/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://scratch.mit.edu/projects/120114352/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://sdrv.ms/1cEhTwC": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://shar.es/E4YZs": {
+      "verdict": "dead",
+      "status": 503
+    },
+    "http://share.snacktools.com/FBCDC8AF8D6/bh9aglsm": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://share.snacktools.com/FBCDC8AF8D6/bh9aglsm"
+    },
+    "http://slides.com/digitaldrummerj/ionic-framework": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slides.com/javafxpert/machine-learning-exposed": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slides.com/petebd/a-day-in-the-life-of-a-bug#/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slides.com/sungthecoder/js-module-history": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/15OnhuG": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/18Coqm3": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/1sIgI6H": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/1vQDbOv": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/1wa0mnf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://slidesha.re/mYogQ6": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://sourceforge.net/projects/facebookide/": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Attention Required! | Cloudflare"
+    },
+    "http://sourceforge.net/projects/mqnic/": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Attention Required! | Cloudflare"
+    },
+    "http://speakerdeck.com/frankstratton/scale-oriented-architecture": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://speakerdeck.com/iroy2000/react-plus-reflux-and-how-to-boost-your-development-workflow": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://speakerdeck.com/mpandit/aws-lambda-with-serverless-framework-and-java": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://speakerrate.com/talks/26341-clean-code-design-patterns-and-best-practices-at-silicon-valley-code-camp": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://speakerrate.com/talks/26351-debugging-troubleshooting-monitoring-distributed-web-cloud-applications": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://speakerrate.com/talks/38001-clean-code-i-best-practices": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://sqlblog.com/blogs/hugo_kornelis/archive/2013/10/05/decks-and-demos-session-material-for-silicon-valley-code-camp.aspx": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "Timeout 30000ms exceeded."
+    },
+    "http://Startgator.com": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Just a moment..."
+    },
+    "http://sway.com/mL4SwsUVn9eaRj5F": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://technoracle.blogspot.com/2011/10/silicon-valley-code-camp-materials.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://testscribe.com/wiki/Demo-Video-and-Presentation": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://testscribe.com/wiki/Demo-Video-and-Presenta"
+    },
+    "http://therockncoder.blogspot.com/2013/10/beginning-html5-mobile-game-programming.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://threefeetbook.com/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/adblockPres": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Error 404 (Not Found)!!1"
+    },
+    "http://tinyurl.com/AngularTodayTomorrow": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/hcam5g9": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/kgwfe2n": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/kidsatplay2014presentation": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "http://tinyurl.com/kzf5ry4": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/lsxdsze": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/npc9njb": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://tinyurl.com/oobdwnr": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tinyurl.com/qyyuyjc": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://tinyurl.com/svccrpijavawongslides": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "fw_error_www"
+    },
+    "http://traf-o-data.blogspot.com/2013/10/silicon-valley-code-camp-session.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://tweetmonkey.io": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://tweetmonkey.io/"
+    },
+    "http://twiki.org/cgi-bin/view/Codev/TWikiPresentation2015x10x03": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://twiki.org/cgi-bin/view/Codev/TWikiPresentation2017x10x08Regex": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://twiki.org/cgi-bin/view/Codev/TWikiPresentation2018x10x14Regex": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://twitter.com/JustinCouto": {
+      "verdict": "dead",
+      "status": 520,
+      "detail": "twitter.com | 520: Web server is returning an unknown error"
+    },
+    "http://voiceofthedba.wordpress.com/2013/09/27/automated-build-and-test/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://webservicecenter.net/go.jsp?id=050200": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Just a moment..."
+    },
+    "http://webservicecenter.net/uportal/modules/timelog/files/1/534599_totalLifeManagementSVCC2015.pdf": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Just a moment..."
+    },
+    "http://wp.me/p2XNvl-s": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://wp.me/p2XNvl-s"
+    },
+    "http://wp.me/pjXAs-Fr": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.actuationconsulting.com/the-study-of-product-team-performance/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page Not Found - Actuation Consulting"
+    },
+    "http://www.alokgovil.com/Presentations/Introduction-to-NLP.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.benmvp.com/slides/2019/svcc/react-eco.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.box.net/cssandimages": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Box"
+    },
+    "http://www.brighternaming.com/Softname.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.cacheonix.com/Architecture-for-Scaling-Java-Applications-to-Multiple-Servers.htm": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.cacheonix.com/svcc2011bpfsjawdc.htm": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.cacheonix.org/presentations/caching-web-requests-with-cacheonix-java-web-cache.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.club.cc.cmu.edu/~ajo/disseminate/cppcon/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.codeucan.com/html-and-css.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.codexframework.com/Whitepapers/SH_DW_2013D.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.craigberntson.com/downloads/healthycodehappycode.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "IIS 7.5 Detailed Error - 404.0 - Not Found"
+    },
+    "http://www.craigberntson.com/presentations.html": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "IIS 7.5 Detailed Error - 404.0 - Not Found"
+    },
+    "http://www.crushitmobile.com/code/jqm.zip": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://www.crushitmobile.com/code/jqm.zip"
+    },
+    "http://www.docdroid.net/jnye/introtomlusingsparkatsvcc.pdf.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.falafel.com/svcc2011.aspx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Celebrating everything there is about falafel"
+    },
+    "http://www.FoundersSpace.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.geekswithblogs.net/Optikal": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.github.com/dchem/node-ibapi-addon": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "http://www.goravtaneza.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at http://www.goravtaneza.com/"
+    },
+    "http://www.harker.com/Talks/JenkinsPHP": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#CC": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#DI": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#INT": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#LLDP": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#LLL": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#TaskAndAwait": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jeremybytes.com/Demos.aspx#WSAbstraction": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.jessicadeen.com/tech/recap-svcc-silicon-valley-code-camp-setup-linux-web-server-monitor-home/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Azure Static Web Apps - 404: Not found"
+    },
+    "http://www.managingtheunmanageable.net/resources.html#slidesets": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.martinvigo.com/?attachment_id=193": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.mbasciences.com/cgi-bin/docs/svcc-2011.pdf": {
+      "verdict": "dead",
+      "status": 403,
+      "detail": "ReNeo, Inc"
+    },
+    "http://www.princesspolymath.com/princess_polymath/?page_id=727": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.qdpma.com/ppt/ModernPerformance_2013.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.RoboticsLearning.com/java": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 Not Found"
+    },
+    "http://www.ronlichty.com/study.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.schechter.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.scribd.com/doc/69392464/GPU-Accelerated-Databases-Speeding-Up-Database-Time-Series-Analysis-Using-OpenCL": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.shaunabram.com/restful-microservices-svcc15/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.shaunabram.com/testing-in-production-presentation-svcc2018/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.shujaat.net/2013/10/silicon-valley-code-camp-2013-session.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.siliconvalley-codecamp.com/miscpages/MachineLearningUsingAmazonEKS.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Silicon Valley Code Camp"
+    },
+    "http://www.siliconvalley-codecamp.com/miscpages/SVCCforKids2015SoftwareReqs-Tynker.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.skmurphy.com/blog/2013/09/28/svcc-2013-work-for-equity-panel-of-startup-founders-announced/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/1Marc/svg-and-raphael-js": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/aabundez/selfservice-bi-with-power-pivot-and-power-view": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/abinnewies/powerful-resume-cover-letter-writing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/adwaitu/microsoft-azure-fundamentals-53498596": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/adwaitu/moving-data-to-the-cloud": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/arivolit/semantic-soa-governance-bpm-and-complex-event-processing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/arivolit/semantic-spend-classification": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/bhaktiks/think-async-26916964": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/CFSolomon/silicon-valley-code-camp-preso": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/chadaustin/3d-on-the-web-in-2011": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/cherukumilli2/web-components-an-introduction-53622873": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/chris.e.richardson/consuming-web-services-asynchronously-with-futures-and-rx-observables-svcc-svcc2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/chris.e.richardson/developing-eventdriven-microservices-with-event-sourcing-and-cqrs-svcc-svcc2015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/chris.e.richardson/developing-polyglot-persistence-applications-svcc-svcc2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/craig00/introduction-to-systems-management-with-saltstack": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/danielcoupal/silicon-valley-code-camp-2015-advanced-mongodb-the-sequel": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/dariusdunlap/bus-modelsandvaluegeneration": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/docluv/html5-fit-get-rid-of-love-handles-63156383": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/douglascrockford/level-7-ecmascript-5-the-new-parts": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/fabienlavocat/windows-azure-mobile-services-26604816": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/fuadmalikov/building-scalable-applications-with-hazelcast": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/garethbowles/self-servicebuilddeploymentagile2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/gayle2/cracking-the-coding-interview-40140660": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/glassfish/fifty-feature-of": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/hoserdude/developing-highly-instrumented-applications-with-minimal-effort": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/IshaiHachlili1/build-cross-platform-mobile-apps-for-ios-android-with-xamarin-mvvmcross": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jbrinnand/svcc2014-40221038": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jcleblanc/securing-restful-apis-using-oauth-2-and-openid-connect": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jcruizjdev/silicon-valley-code-camp-jsf-controller-for-reusability": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jdduncan/building-nodejs-applications-with-database-jones": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jdduncan/codecamp2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jeff-handley/developing-nuget": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/jimdriscoll/groovy-dsls-javaone-presentation": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/joesondow/netflix-open-source-software-who-what-where-when-why-how": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/joonaslehtinen/vaadin-intro-at-gwtcreate": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/lennymarkus/everything-you-ever-wanted-to-know-about-git-but-were-afraid-to-ask": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/lennymarkus/node-js-at-paypal": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/lobster1234/securing-your-apis-with-oauth-openid-and-openid-connect": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/lobster1234/silicon-valley-2014-api-antipatterns": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/LStevens-Huffman/how-to-break-into-mobile-app-development-9818953": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/LStevens-Huffman/me-inc-how-to-create-and-market-your-personal-brand": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/LucidImagination/integrating-solr-hadoop": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/maartenba/using-nu-get-the-way-you-should-svcc": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/marktab/developing-with-sql-server-analysis-services-201310": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/marktab/secrets-of-enterprise-data-mining-201310": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/masimms/svcc-code-shaming-and-antipatterns": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mg007/big-data-analytics-with-spark-53551196": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mg007/introduction-to-big-data-66743612": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mkumar327/ecmascript-6-53522648": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mkumar327/es6-ppt-for-2016": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mkumar327/java-scrip-rubikcube": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/mobile/bhaktiks/fight-empirehtml5": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/nmackenzie/azure-appfabric-applications": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/nmackenzie/windows-azure-iaa-s-26903414": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/angular1x-and-angular-2-for-beginners": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/angular2-66700735": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/react-js-66700604": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/svcc-2013css3andmobile": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/svcc-2013d3-26919629": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ocampesato/svcc-2014html5g-glass": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/PaulBertucci/dxd-big-data-and-data-quality-as-a-service-svcc-oct-2015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/phumphrey/an-engineers-intro-to-oracle-coherence": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/phumphrey/http-session-replication-with-oracle-coherence-glassfish-weblogic": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/planetcassandra/netflix-a-state-of-xen-chaos-monkey-cassandra": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/plaztiksyke/practical-unit-testing-in-c-c": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/PradeepPujari/sais-svcc": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/RajuShreewastavaPMP/7-steps-big-data-journey-for-enterprises": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ramnivas2/full-stack-scala": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/ramnivas2/scala-for-java-developers-silicon-valley-code-camp-13": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/rockncoder/functional-programming-in-javascript-66576643": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/RonLichty/keys-to-crafting-an-effective-agile-culture-svcc-1015": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/RonLichty/teamwork-making-your-dream-team-come-true-agile-iowa-1016": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/SanjeevMishra8/silicon-valleycodecamp2013": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/sdeeg/spring-boot": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/sherm8n/are-you-an-underpaid-developer": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/slideshow/embed_code/27113385": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/slideshow/embed_code/40436389": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/slideshow/embed_code/40437574": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/smartorginc/design-strategies-for-angularjs": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/sramakrishnan11/ios-and-android-apps-automation": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/StephenMcCurry/svcc-26896941": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/stormpath/rest-jsonapis": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/sueselbeck/introduction-to-map-and-location-apis-silicon-valley-code-camp-2017": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/SumantTambe/c-generators-and-propertybased-testing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/SumantTambe/fun-with-lambdas-c14-style": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/SumantTambe/overloading-in-overdrive-a-generic-datacentric-library-for": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/theceo/introduction-to-clojure-9639369": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/theojungeblut/accidentally-manager-a-survival-guide-for-firsttime-engineering-managers": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/theojungeblut/clean-code-i-best-practices": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/theojungeblut/clean-code-part-ii-dependency-injection": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/trbdavies/sv-code-campslides2011": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/unscriptable/intro-to-rave-js-at-svcc-fall-2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.slideshare.net/warrenfromaustin/waizee-task-queues-plus-d3": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.sqlsaturday.com/SessionDownload.aspx?suid=10697": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 - Page not found"
+    },
+    "http://www.svmarketeer.com/StartBizToday.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 Not Found"
+    },
+    "http://www.technologywoman.com/speaking-engagements/": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Gayle Laakmann McDowell"
+    },
+    "http://www.technologywoman.com/wp-content/uploads/2013/10/Cracking-the-Coding-Interview-SVCC-October-2013.pptx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Gayle Laakmann McDowell"
+    },
+    "http://www.windowsazure.com/en-us/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.youtube.com/watch?v=_4KTd17THKo": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.youtube.com/watch?v=AaGbP5bnlG4": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.youtube.com/watch?v=kddld-SS7lw": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.youtube.com/watch?v=Z7oFGVX7RV4": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.zeidman.biz/CodeCamp/SynthOS%20Presentation.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://www.ZeidmanConsulting.com/CodeCamp/Protecting_Your_Software_Intellectual_Property.pdf": {
+      "verdict": "dead",
+      "status": 404
+    },
+    "http://Yto.io/xngu": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://zippycoder.com/svcc-kids-2016/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "http://zippycoder.com/svcc2015": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found – Zippy Coder"
+    },
+    "http://zurb.com/speak/talks/3_ways_to_go_mobile": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://1drv.ms/b/s!AtKyZDU97Im7hI8bV4lhCGv1APkPRA": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://1drv.ms/b/s!AtKyZDU97Im7hJUGnMkLCZeXVhuI7w?e=C2kHNt": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://1drv.ms/f/s!ArtNt2j9rxvUlHAz-cHs3t_8gafP": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://1drv.ms/p/s!AoXD5g8lRKKSlu84ZVlY_Ddq8NIElw": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://angular-u.firebaseapp.com": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Site Not Found"
+    },
+    "https://angular.io": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://bit.ly/2xExrlL": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://bitly.com/DSUYL": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://bradirby.click/SVCC2018-EDA-Microsvc": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://bradirby.click/SVCC2018-EDA-Microsvc"
+    },
+    "https://bradirby.click/SVCC2018-MicroSvcPanel": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://bradirby.click/SVCC2018-MicroSvcPanel"
+    },
+    "https://coderanger.net/talks/internet/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://css-tricks.com/star-apps-a-new-generation-of-front-end-tooling-for-development-workflows/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://developer.samsung.com/galaxy-watch/develop": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://dl.dropbox.com/s/oj7a2yt6p1y07id/codecampIOT.pdf?dl=0": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/document/d/1G7Qt9XrxuQJ7c0qUjDtd_8mjeQK2xrYoSAtIVNU9-M8/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/document/d/1r8S9umYYPhG5V6sl1YVVqWAxBUXIZgvSLFazTr01tks/edit#heading=h.mq3056oltbc": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/document/d/1yXOtRzxXhaGzolVy7HsQF-h70DotkTS1B6VXPfz55wk/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1aWuYOZjhpGZozq11mxzDYExvuYpdMnTBn4vIlgE-UzU/edit#slide=id.g4c8734f735_0_4": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1dKb4akc9U4xW9_L57Gx21qNbH33SVJjdvmSaFXkCCeI/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1iiTmrGkc7lZHcrgQOQ1xfro82BvFOqoVSnhH-HdWPx4/present#slide=id.p": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1OL443HpCrBIYScgit5YbLy1iB7beX7FS7aPVOAJsKR8/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1oOF9qHh6qPwF-ocOwGRzmLIRXcIcguDFwa7x9EicCo8/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1qlcIAia-Wvk_Q2amWlFCIqZCvtgDo6GhbBIFX2fNQGU/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1qz1gPmNPBtCQLYwHcsWWoMyzmgdSia9DWtGY79OZMAI/edit?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://docs.google.com/presentation/d/1rWWFr2mOru80b6cuCUpQ0fzVG49AUe_ihD6SkIu1hLE": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "https://docs.google.com/presentation/d/1SY4GbI3pMd2g60B7g5jWQjrKa87lkbVOnZMTtW128gs/edit?usp=sharing": {
+      "verdict": "dead",
+      "status": 410,
+      "detail": "Page Not Found"
+    },
+    "https://docs.google.com/presentation/d/e/2PACX-1vTxoNHf0_fTJQ9x9W--QZnoi2BUjtO0S9-grbQ2SZRucneCnzjtDPWWxWYlDH6fGOLYFRh1EA3L1i6s/pub?start=false&loop=false&delayms=3000&slide=id.g127c88c826c57357_184": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://dotnettips.wordpress.com/2017/08/28/dotnetdave-rocks-silicon-valley-code-camp-2017/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://drive.google.com/drive/folders/0B22KXlqHz6ZNdUw1aTRFWlBrMjA?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://drive.google.com/drive/folders/0B22KXlqHz6ZNUnZ3Umw2YkFFVms?usp=sharing": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Error 404 (Not Found)!!1"
+    },
+    "https://drive.google.com/file/d/0B8gfLP00w_guTzR0R3RjUUFIczg/": {
+      "verdict": "dead",
+      "status": 200,
+      "detail": "private Google file (sign-in page)"
+    },
+    "https://drive.google.com/file/d/1cNzMeXZ-78YJE3SXGnEI7cxx78y2tU9W/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page Not Found"
+    },
+    "https://drive.google.com/file/d/1Le6TPWyP1osXm1RGXXvs5prPPrioZ7Ul/view?usp=sharing": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page Not Found"
+    },
+    "https://drive.google.com/file/d/1S22QX-tGGXM7ZDKw8V-qQ9DL3YeJ05yr/view?usp=sharing": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://drive.google.com/open?id=0B3-0mno9EvDeMG1YRVE3REtfcGs": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://drive.google.com/open?id=0BxZErqdu4FtOdkp6M19oRHE5eWM": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://drive.google.com/open?id=1bSFjy98Kjk2yAvn8Fo8WB7Zd9nQnh3lx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://freya-fs.github.io/freya.intro": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Site not found · GitHub Pages"
+    },
+    "https://github.com/alphonzo79/AndroidArchitectureExample": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/alphonzo79/HelloAndroidExample": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/andrewkarcher/presentations/tree/master/SVCC_AddSpark_20191020": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/anooptrivedi/workshops-python-level1": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/anooptrivedi/workshops-python-level2": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/antonyross/SVCC-2018-Presentation-Slides/blob/master/Introduction_to_Understanding_Deep_Learning_SVCC_2018.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/antonyross/SVCC-2019-Presentation-Slides/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/behappyrightnow/anagram": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/CODAIT/MAX-Workshop-Web-App": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "https://github.com/cwoodruff/devsum17_electron": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "https://github.com/cyrilivargarcia/Machine-Learning-for-iOS-Presentation": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/davideast/angularu-a2-migration": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/DCFsharp/WhyFunctional-SVCC2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/DeborahK/Angular-MovieHunter-WebAPI": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "HTTPS://github.com/DeborahK/AngularU2015-Angular2Forms": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/delphix/dxData": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "https://github.com/drnugent/presentations/blob/master/kubernetes-vs-openshift-20191020-svcc.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/drnugent/presentations/blob/master/kubernetesopenshift-20191019-svcodecamp.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/enright/lifta": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/gaurav51289/svcc-spot/blob/master/svcc-clidev-wide.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/IBM-Cloud/openwhisk-darkvisionapp": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/isidore/ExtremeFakeItTillYouMakeIt/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/johnmcfarlane/cnl/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/krmanoj/CodeCamp/tree/master/2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/LennartFr/SVCodeCamp2019": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/lidderupk/chatbot-workshop/blob/master/training.md": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/purplemagma/starter-plugin": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/qawarrior/Parallel-and-Async-Scripting-with-PowerShell-": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "https://github.com/rahulaga/code-camp": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/Rockncoder/2018-svcc-cpp-web-servers-and-apis": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/Rockncoder/PlaneGame2": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/SashaOv/scikit-talk": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/sedouard/winjs-svcc": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/spring-projects/spring-xd/wiki": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/sqlsolver/2017_PnP_ProvisioningDemo/wiki": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Page not found · GitHub · GitHub"
+    },
+    "https://github.com/sujee/svcodecamp-2014": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/techbubble/buildstarter": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/timmyreilly/introduction-to-flask": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/timmyreilly/IntroductionToPython": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/TravelingTechGuy/svcc-chrome-extension": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/wkoszek/talks/tree/master/svcodecamp2016": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/zacharythomasabraham/workshops-python-level1": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://github.com/ziongeorgeabraham/gamedesignwithscratch": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://gitlord.com/": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://gitlord.com/"
+    },
+    "https://goo.gl/obdXJK": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://goo.gl/zE7mdp": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://greatercommons.com/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://greatercommons.com/learn/go-language": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://greatercommons.com/learn/golang": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://iam.cab/tekton-talk": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "Timeout 30000ms exceeded."
+    },
+    "https://InterviewKickstart.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://microservices.io/microservices/general/2018/10/15/svcc.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://nightbird.blob.core.windows.net/svcc-2016/IntroToStorage.pptx": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://nightbird.blob.core.windows.net/svcc-2016/"
+    },
+    "https://panesofglass.github.io/TodoBackendFSharp": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://prgress.co/ReactHooks": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://princessleia.com/presentations/2019/Developing_for_the_Modern_Mainframe_-_SV_Code_Camp.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://prod.d2spw89uqv8cpi.amplifyapp.com/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://qualitycoding.org/talk/svcc2019/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://raygun.com": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://samsclass.info": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://samsclass.info/128/128_CodeCamp2015.shtml": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://siliconvalley-codecamp.com/miscpages/Applovin_CodeCamp2015_V2_PPT.pptx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Silicon Valley Code Camp"
+    },
+    "https://slack.engineering/how-slack-built-shared-channels-8d42c895b19f": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://slides.com/lalithaiyer/evolution-of-modules#/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://slides.com/sungthecoder/js-module-history": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/girlie_mac/dominating-shadow-dom-at-angularu-conf-san-francisco": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/iroy2000/javascript-testing-with-jasmine": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/mpandit/disaster-recovery-what-why-and-how": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/nbarbettini/build-an-alexa-skill-with-net-core-and-aws-lambda": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/u/taylorleese": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://speakerdeck.com/vgraupera/time-management-for-engineering-managers": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://straty.com/svcc18": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://tinyurl.com/codecamp2019-tonynguyen": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://tinyurl.com/svcc2018-ml-tnguyen": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://twitter.com/mgonto": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://vgraupera.s3.amazonaws.com/presentations/What%20I%20Learned%20from%20Interviewing%2050%2B%20Engineering%20Managers.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://webservicecenter.net/uportal/modules/timelog/files/1/774296_totalLifeManagementSVCC2018.pdf": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "Just a moment..."
+    },
+    "https://www.beautiful.ai/player/-Lrr4ai-KwLgqumvcHry": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.box.net/shared/9gvtz99lczkbki8tpnm1": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.bunkr.me/p/0b8d477d0841d2a3b01e66e69ab6a121": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.clearslide.com/view/mail?iID=D3TfBPhkMcH3cbHgJgGR": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.crockford.com/pp/jsonsaga2019.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.crockford.com/pp/numbers2019.pptx": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.dropbox.com/s/ke9cfl4vk168hwc/You%20Don%E2%80%99t%20Know%20What%20you%20Don%27t%20Know%20-%20code%20camp%20Oct%2013%202018%204x3%20.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.dropbox.com/sh/0iubnk0hku1n0wl/AADxsnmu6JDUNjOQGWl3wGyIa?dl=0": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.dropbox.com/sh/l6568tvfstblfmi/AADryRfRqX2Z0ARDxoeKzq5Wa?dl=0": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.hwswworld.com/index.php?route=product/category&path=139": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.linkedin.com/posts/activity-6592682093845839872-WoHy": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.linkedin.com/posts/activity-6593217042755792896-p3yb": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.mysql.com/products/enterprise/document_store.html": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.siliconvalley-codecamp.com/miscpages//SoftwareArchitectPresentation-10-1-2016-Exact.pdf": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Silicon Valley Code Camp"
+    },
+    "https://www.siliconvalley-codecamp.com/miscpages/AppLovin_CodeCamp2017.pptx": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "Silicon Valley Code Camp"
+    },
+    "https://www.siliconvalley-codecamp.com/miscpages/ron_k_SoftwareArchitecture2024_A.pdf": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/AdamSbeta/secure-yourbottomline-cybercrimeexpertsorgv1shared-185847744": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/adwaitu/azure-in-the-enterprise-governance-organization": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/bigdatatrunk/ai-and-ml-for-everyone": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/bigdatatrunk/machine-learning-intro-for-anyone-and-everyone": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/CFSolomon/introduction-to-the-lean-definition-process": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/cnbailey/silicon-valley-code-camp-2019-reaching-the-cloud-native-world": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/dcnielsen/10-ways-to-scale-your-website-silicon-valley-cloud-camp-2019": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/jimmckeeth/jim-mc-keeth-wearable-thought-input/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/llewellynfalco/the-falco-technical-coaching-framework": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/NicRaboy/powering-an-api-with-graphql-golang-and-nosql": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/npetrace/silicon-valley-code-camp-blockchain-oct-2017": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/owlmonkey": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/RonLichty/critical-agile-practices-nuanced-techniques": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/RonLichty/whats-it-take-to-be-a-good-manager": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/2ydBRJO36wWjlb": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/3RewEtqE1sj4vN": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/61h0InnfToD0Kp": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/EVY5EgYyNdfsTn": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/EY5DDfGNSDt22S": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/m2E8xyQU4dc8Ya": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/oaVn0zSROQdRtn": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/secret/tvIpafCunqjUwS": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/SMylroie/implementing-machine-learnng-at-the-iot-edge": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/SMylroie/setting-up-a-vscode-development-environment-for-mbed-5-application-using-the-gcc-tool-chain-on-windows-114202826": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/theojungeblut/accidentally-manager-a-survival-guide-for-firsttime-engineering-managers": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/theojungeblut/clean-code-i-best-practices": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/YanlinZhou2/securing-kafka-with-500-billion-messages-a-day": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/ZafarShahidPhD/android-binder-deep-dive": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.slideshare.net/ZafarShahidPhD/zero-configuration-networking/1": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.sqlsaturday.com/909/Sessions/Details.aspx?sid=96942": {
+      "verdict": "dead",
+      "status": 404,
+      "detail": "404 - Page not found"
+    },
+    "https://www.tedmyoung.com/human-learning-svcc-2019": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.tedmyoung.com/human-learning-talk-svcc/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.tedmyoung.com/ports-and-adapters-and-burgers-svcc/": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.verizonmedia.com/press/agility-and-stability-continuous-integration-and-delivery": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.youtube.com/channel/UC7g2YHK0fJ4m_oMacH4fjow": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://www.youtube.com/watch?v=-PQLxdnTbEM&": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "https://youtu.be/A1jtncujGEU": {
+      "verdict": "ok",
+      "status": 200
+    },
+    "launchingtoleading.com  (coming in August)": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "None": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "oracle.com": {
+      "verdict": "bot-check",
+      "status": 403,
+      "detail": "fw_error_www",
+      "href": "https://oracle.com"
+    },
+    "samsclass.info": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://samsclass.info"
+    },
+    "shecodesnow.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://shecodesnow.com/"
+    },
+    "Slides, Workshop": {
+      "verdict": "dead",
+      "status": "malformed"
+    },
+    "www.1schema.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_SSL_PROTOCOL_ERROR at https://www.1schema.com/"
+    },
+    "www.code.org": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.code.org"
+    },
+    "www.mysql.com": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.mysql.com"
+    },
+    "www.RogueMaking.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_CERT_DATE_INVALID at https://www.roguemaking.com/"
+    },
+    "www.tobiahmarks.com": {
+      "verdict": "dead",
+      "status": "error",
+      "detail": "net::ERR_NAME_NOT_RESOLVED at https://www.tobiahmarks.com/"
+    },
+    "www.twitter.com/mark__a": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.twitter.com/mark__a"
+    },
+    "www.youtube.com/playlist?list=PL18pGTQt9fFgx6dn_TKchhvuxmiGUCkxF": {
+      "verdict": "ok",
+      "status": 200,
+      "href": "https://www.youtube.com/playlist?list=PL18pGTQt9fFgx6dn_TKchhvuxmiGUCkxF"
+    }
+  }
+}

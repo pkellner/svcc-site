@@ -1,0 +1,42 @@
+{
+  "name": "svcc-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build:static": "TZ=UTC SHOW_ALL_EVENTS=true next build --webpack && sh scripts/prune-out.sh && node scripts/legacy-speaker-pages.mjs",
+    "build:gh-pages": "TZ=UTC SHOW_ALL_EVENTS=true NEXT_PUBLIC_BASE_PATH=/svcc-site next build --webpack && sh scripts/prune-out.sh && node scripts/legacy-speaker-pages.mjs",
+    "deploy:gh-pages": "node scripts/deploy-gh-pages.mjs",
+    "deploy:pages": "node scripts/deploy-gh-pages.mjs",
+    "test:gh-pages": "node scripts/test-gh-pages.mjs",
+    "test:gh-pages:local": "node scripts/test-gh-pages.mjs --local",
+    "test:gh-pages:browser": "node scripts/test-gh-pages-browser.mjs",
+    "test:static:local": "NEXT_PUBLIC_BASE_PATH= node scripts/test-gh-pages.mjs --local",
+    "test:static": "NEXT_PUBLIC_BASE_PATH= GH_PAGES_URL=${PAGES_URL:-https://www.siliconvalley-codecamp.com} node scripts/test-gh-pages.mjs",
+    "test:static:browser": "NEXT_PUBLIC_BASE_PATH= GH_PAGES_URL=${PAGES_URL:-https://www.siliconvalley-codecamp.com} node scripts/test-gh-pages-browser.mjs",
+    "home-data": "node scripts/build-home-data.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "setup": "npm install && npx playwright install chromium"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "bootstrap": "^5.3.3",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sanitize-html": "^2.17.7",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/sanitize-html": "^2.9.1",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
+    "sass": "^1.84.0",
+    "typescript": "^5.9.3"
+  }
+}

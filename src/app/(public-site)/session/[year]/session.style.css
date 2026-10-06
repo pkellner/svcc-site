@@ -1,0 +1,9 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*display: hidden means that the element still takes the space, none means it is as if the element is not there, opacity 0 makes the elements have interactivity */

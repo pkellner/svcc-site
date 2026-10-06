@@ -1,0 +1,29 @@
+// main container custom styles
+
+// clip, not hidden: overflow-x: hidden on both html and body turns body into
+// its own scroll container, which stops the sticky mobile header sticking.
+html,
+body {
+  overflow-x: clip;
+}
+
+.container-main {
+  position: relative;
+  @extend .container-fluid;
+  max-width: $size-max-container-width;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 200px;
+
+  &-arrow {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

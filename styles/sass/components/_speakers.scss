@@ -1,0 +1,181 @@
+.speakers-title {
+  font-size: rem-calc(20px);
+  font-family: $font-content;
+  color: lighten($color-main-dark, 20%);
+  padding-left: rem-calc(40px);
+  padding-top: rem-calc(45px);
+  padding-bottom: rem-calc(10px);
+  position: relative;
+  //border-bottom: 3px solid $color-borders;
+
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: 73%;
+    transform: translateY(-80%);
+    width: rem-calc(12px);
+    height: rem-calc(13px);
+    background-image: url("../../sassAssets/images/timeline-icon-transparent.png");
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    // @include media-breakpoint-down(md) {
+    //   top: 30%;
+    // }
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: rem-calc(1px); //17px
+    top: rem-calc(-45px);
+    width: 2px;
+    background-color: $color-borders;
+    bottom: rem-calc(31.84px); //40px
+
+    @include media-breakpoint-down(md) {
+      bottom: rem-calc(32px);
+    }
+  }
+}
+
+.speakers-filters {
+  float: right;
+  @include clearfix;
+
+  @include media-breakpoint-down(sm) {
+    width: calc(100% + 45px);
+  }
+
+  .dropdown,
+  .filter-bar__search {
+    float: right;
+  }
+
+  .dropdown {
+    width: 180px;
+    max-width: 100%;
+    flex: 1;
+
+    .dropdown-menu,
+    .btn {
+      font-family: $font-content;
+      font-size: 16px;
+      text-transform: none;
+    }
+  }
+
+  .filter-bar__search {
+    width: 320px;
+    max-width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: calc(100% - 1%);
+    }
+  }
+}
+
+.speakers-list-row {
+  width: 100%;
+  border-top: 1px solid $color-borders;
+  margin-top: rem-calc(20px);
+  padding-top: rem-calc(10px);
+}
+
+.speakers-list-item {
+  padding-top: rem-calc(30px);
+  padding-bottom: rem-calc(30px);
+  border-bottom: 1px solid $color-borders-subtle;
+}
+
+.speakers-session-details {
+  display: flex;
+  align-items: center;
+  padding-top: rem-calc(20px);
+  padding-bottom: rem-calc(20px);
+  background-color: #f5f9fa;
+}
+
+.speakers-session-title {
+  font-size: rem-calc(18px);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  width: 50%;
+}
+
+.speakers-session-title,
+.speakers-session-date,
+.speakers-session-dropdown {
+  float: left;
+}
+
+.speakers-session-date,
+.speakers-session-dropdown {
+  width: 25%;
+}
+
+.speaker-list-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: rem-calc(11px);
+  font-family: $font-headers-light; // "Handel Gothic", sans-serif
+  margin-top: rem-calc(30px);
+  margin-bottom: rem-calc(30px);
+
+  .pagination {
+    justify-content: center;
+    margin: 0;
+
+    .page-item {
+      &:last-child {
+        .page-link {
+          border: none;
+          color: $color-main-dark;
+          text-transform: uppercase;
+        }
+      }
+
+      .page-link {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 0px;
+        color: $color-article-text;
+      }
+
+      &.active {
+        .page-link {
+          background-color: transparent;
+          color: $color-main-dark;
+
+          &:after {
+            content: "";
+            background: $color-contrast-1;
+            height: rem-calc(3px);
+            width: 100%;
+            position: absolute;
+            bottom: rem-calc(-2px);
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    color: $color-main-dark;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
