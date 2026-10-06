@@ -6,7 +6,7 @@
 # ~726 files in public/ -- not done this session, see
 # STATIC-SITE-HANDOFF.md). This is the known-bad denylist: every file
 # already identified by name during this conversion, plus every sponsor/
-# signup document the owner decided to drop since the event is over.
+# signup document the owner decided not to publish.
 set -e
 
 OUT_DIR="${1:-out}"
@@ -35,7 +35,7 @@ remove "$OUT_DIR/miscpages/speakers.json"
 remove "$OUT_DIR/miscpages/db.json"
 remove "$OUT_DIR/miscpages/apod.json"
 
-# Sponsor/signup/sales material -- the event is over, none of it is needed
+# Sponsor/signup/sales material for past events -- none of it is published
 # (decided this session, see STATIC-SITE-PLAN.md's open decisions). Found by
 # a manual pass over public/ (pdftotext on every PDF, checked for emails/
 # phone numbers) rather than assumed safe by extension.

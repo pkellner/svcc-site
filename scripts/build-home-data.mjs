@@ -1,4 +1,4 @@
-// Home page galaxy data, generated from static-data/years/*.json (the archive never changes, so the
+// Home page galaxy data, generated from static-data/years/*.json (the past events' data doesn't change, so the
 // output is committed):
 //   - public/home/sessions.json: one [title, slug, first speaker, time, room] row per session,
 //     oldest event first. That is the order of the session tiles, so tile k is row k.

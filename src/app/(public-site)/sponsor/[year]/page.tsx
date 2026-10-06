@@ -11,8 +11,18 @@ export async function generateStaticParams() {
   return getAllYearTokens();
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ year: string }> }): Promise<Metadata> {
+  const { year } = await props.params;
+  const sponsors = await getSponsorsData(year);
+  return eventListingMetadata(year, "Sponsors", "sponsor", (e) =>
+    sponsors.length ? `The ${sponsors.length} sponsors who made ${e.label}, ${e.date}, possible.` : `The sponsors who made ${e.label}, ${e.date}, possible.`,
+  );
+}
 import {getCodeCampYears} from "@/lib/staticData/codeCampYears/codeCampYears";
 import {notFound} from "next/navigation";
+import type {Metadata} from "next";
+import {eventListingMetadata} from "@/lib/seo";
 
 export default async function PageSponsor(props: { params: Promise<{ year: string }> }) {
   const params = await props.params;

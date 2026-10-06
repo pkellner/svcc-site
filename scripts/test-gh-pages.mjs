@@ -6,12 +6,14 @@
 //   2. every same-origin src/href and every Next.js redirect target in every
 //      page carries the basePath and resolves to a file that exists in out/;
 //   3. every one of those unique targets (images, scripts, CSS, pages) is
-//      fetched live and returns 200.
+//      fetched live and returns 200;
+//   4. every og:image/twitter:image card is served live as a JPEG, byte-identical
+//      to out/ (scripts/test-meta.mjs checks the tags themselves locally).
 // A reference whose target isn't in out/ is compared with the original site
 // (ORIGINAL_URL): if the original serves it, it's a FAIL (lost in the
 // conversion); if the original 404s too, it's a dead link inherited from old
 // content (WARN); files prune-out.sh removes on purpose are listed as such.
-// `--local` skips the GitHub Pages checks (1 and 3) -- use it as a pre-deploy
+// `--local` skips the GitHub Pages checks (1, 3 and 4) -- use it as a pre-deploy
 // gate after `npm run build:gh-pages`.
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
@@ -26,7 +28,7 @@ const ORIGINAL_URL = process.env.ORIGINAL_URL || "https://www.siliconvalley-code
 const LOCAL_ONLY = process.argv.includes("--local");
 const MAX_REPORT = 100;
 
-// Mirrors scripts/prune-out.sh: removed from the archive on purpose.
+// Mirrors scripts/prune-out.sh: removed from the site on purpose.
 const PRUNED = [
   /agreement/i,
   /w-?9/i,
@@ -149,6 +151,7 @@ async function main() {
   const missingBasePath = [];
   const brokenRefs = [];
   const uniqueRefs = new Map(); // ref path (no query/hash) -> first page that uses it
+  const socialImages = new Map(); // absolute og:image/twitter:image URL -> first page that uses it
   for (const page of [...pages, "/404.html"]) {
     const file = page === "/404.html" ? path.join(OUT_DIR, "404.html") : path.join(OUT_DIR, page, "index.html");
     const html = readFileSync(file, "utf8");
@@ -160,6 +163,11 @@ async function main() {
       if (!fileForUrlPath(ref)) brokenRefs.push({ page, ref });
       const key = ref.split("#")[0].split("?")[0];
       if (!uniqueRefs.has(key)) uniqueRefs.set(key, page);
+    }
+    // og:image and twitter:image are absolute URLs in <meta content>, which extractRefs doesn't see.
+    for (const m of html.matchAll(/<meta\s+(?:property|name)="(?:og:image|twitter:image)"\s+content="([^"]+)"/g)) {
+      const url = decodeEntities(m[1]);
+      if (url.startsWith(`${SITE_URL}/`) && !socialImages.has(url)) socialImages.set(url, page);
     }
   }
   console.log(`${uniqueRefs.size} unique same-origin references checked against out/.`);
@@ -200,6 +208,7 @@ async function main() {
 
   let pageFailures = [];
   let liveRefFailures = [];
+  let socialFailures = [];
   if (!LOCAL_ONLY) {
     // Check 1: every page live and byte-identical; unknown URL -> 404 page.
     const probes = [...pages.map((p) => ({ urlPath: p, file: path.join(OUT_DIR, p, "index.html"), expect: 200 }))];
@@ -238,6 +247,25 @@ async function main() {
       "assets",
     );
     liveRefFailures = refResults.filter((r) => !r.ok);
+
+    // Check 4: every social card is served live, as a JPEG, byte-identical to out/.
+    const socialResults = await pool(
+      [...socialImages.keys()],
+      async (url) => {
+        const file = fileForUrlPath(url.slice(ORIGIN.length));
+        try {
+          const res = await fetchWithRetry(url);
+          const body = Buffer.from(await res.arrayBuffer());
+          const type = res.headers.get("content-type") ?? "";
+          const identical = !!file && sha(body) === sha(readFileSync(file));
+          return { url, status: res.status, type, identical, ok: res.status === 200 && type.startsWith("image/jpeg") && identical, usedOn: socialImages.get(url) };
+        } catch (err) {
+          return { url, status: 0, ok: false, error: err.message, usedOn: socialImages.get(url) };
+        }
+      },
+      "social cards",
+    );
+    socialFailures = socialResults.filter((r) => !r.ok);
   }
 
   report("References with a wrong basePath (missing, or doubled on a redirect target) -- will 404 on GitHub Pages", missingBasePath, (f) => `${f.ref}   (on ${f.page})`);
@@ -249,17 +277,21 @@ async function main() {
   report("Pages that failed live", pageFailures, (f) =>
     f.error ? `${f.urlPath} -> ERROR ${f.error}` : `${f.urlPath} -> HTTP ${f.status}, expected ${f.expect}${f.identical ? "" : ", content differs from out/"}`,
   );
+  report("Social cards (og:image/twitter:image) that failed live", socialFailures, (f) =>
+    f.error ? `${f.url} -> ERROR ${f.error}` : `${f.url} -> HTTP ${f.status} ${f.type}${f.identical ? "" : ", content differs from out/"}   (used on ${f.usedOn})`,
+  );
   report("Assets/links that failed live", liveRefFailures, (f) => `${f.ref} -> ${f.error ? `ERROR ${f.error}` : `HTTP ${f.status}`}   (used on ${f.usedOn})`);
 
   // Live failures for targets already known to be absent from out/ are
   // covered by the classification above, not counted twice.
   const liveRealFailures = liveRefFailures.filter((f) => fileForUrlPath(f.ref));
-  const failed = missingBasePath.length + lostInConversion.length + pageFailures.length + liveRealFailures.length;
+  const failed = missingBasePath.length + lostInConversion.length + pageFailures.length + liveRealFailures.length + socialFailures.length;
   console.log("");
   if (!LOCAL_ONLY) {
     console.log(
       `Pages: ${pages.length + 1 - pageFailures.length}/${pages.length + 1} OK (byte-identical to out/).  ` +
-        `Unique assets/links served live: ${uniqueRefs.size - liveRealFailures.length - missingTargets.size}/${uniqueRefs.size - missingTargets.size} OK.`,
+        `Unique assets/links served live: ${uniqueRefs.size - liveRealFailures.length - missingTargets.size}/${uniqueRefs.size - missingTargets.size} OK.  ` +
+        `Social cards: ${socialImages.size - socialFailures.length}/${socialImages.size} OK.`,
     );
   }
   console.log(

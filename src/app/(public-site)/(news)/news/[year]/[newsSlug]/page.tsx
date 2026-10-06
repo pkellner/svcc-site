@@ -1,6 +1,8 @@
 import React from "react";
 import NewsDetail from "@/app/(public-site)/(news)/news/[year]/[newsSlug]/NewsDetail";
 import {getAllNewsData} from "@/lib/staticData/news/news";
+import type {Metadata} from "next";
+import {eventInfo, newsCard, pageMetadata, plainText} from "@/lib/seo";
 
 export async function generateStaticParams() {
   const news = await getAllNewsData();
@@ -16,6 +18,22 @@ export async function generateStaticParams() {
   return params;
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ newsSlug: string; year: string }> }): Promise<Metadata> {
+  const { year, newsSlug } = await props.params;
+  const item = (await getAllNewsData()).find((n) => n.codeCampYear === year && n.titleSlug === newsSlug);
+  if (!item) return {};
+  const e = await eventInfo(year);
+  const title = plainText(item.title, 120);
+  return pageMetadata({
+    title,
+    description: plainText(item.description) || plainText(item.contentData) || `News from ${e?.label ?? "Silicon Valley Code Camp"}.`,
+    path: `/news/${year}/${newsSlug}/`,
+    image: newsCard(year, newsSlug),
+    imageAlt: title,
+    type: "article",
+  });
+}
 
 export default async function Page(props: { params: Promise<{ newsSlug: string; year: string }> }) {
   const params = await props.params;

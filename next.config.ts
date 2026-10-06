@@ -2,11 +2,11 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 /**
- * STATIC-SITE-PLAN.md Step 6: this branch builds a static, no-auth archive
+ * STATIC-SITE-PLAN.md Step 6: this branch builds a static, no-auth site
  * for GitHub Pages, so rewrites()/headers() are gone -- both are
  * unsupported under output: "export" (there's no server left to run them),
  * and GitHub Pages can't set response headers anyway. Kept below only as a
- * record of what the live, server-rendered site used to send; a <meta> CSP
+ * record of what the server-rendered site sent; a <meta> CSP
  * tag could approximate part of this, but can't cover
  * frame-ancestors/X-Frame-Options.
  *

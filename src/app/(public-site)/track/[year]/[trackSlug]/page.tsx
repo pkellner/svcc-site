@@ -6,6 +6,9 @@ import {getTrackSlugs} from "@/lib/staticData/sessions/sessionsUtils";
 import {getCodeCampYears} from "@/lib/staticData/codeCampYears/codeCampYears";
 import SessionsForTrack from "@/app/(public-site)/track/[year]/[trackSlug]/sessions-for-track";
 import TrackHeader from "@/app/(public-site)/track/[year]/[trackSlug]/track-header";
+import type {Metadata} from "next";
+import {eventInfo, pageMetadata, plainText, trackCard} from "@/lib/seo";
+import {getSessionIdsForTrack, getTrackById} from "@/lib/staticData/sessions/trackDetail";
 
 export async function generateStaticParams() {
   const years = await getCodeCampYears();
@@ -24,6 +27,23 @@ export async function generateStaticParams() {
   return params;
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ trackSlug: string; year: string }> }): Promise<Metadata> {
+  const { year, trackSlug } = await props.params;
+  const trackId = (await getTrackSlugs(year))?.find((t) => t.trackSlug?.toLowerCase() === trackSlug.toLowerCase())?.trackId;
+  const track = trackId === undefined ? undefined : await getTrackById(year, trackId);
+  const e = await eventInfo(year);
+  if (!track || !e) return {};
+  const count = (await getSessionIdsForTrack(year, track.id)).length;
+  const name = plainText(track.named, 80);
+  return pageMetadata({
+    title: `${name} · ${e.label}`,
+    description: [`The ${name} track at ${e.label}: ${count} ${count === 1 ? "session" : "sessions"}.`, plainText(track.description)].filter(Boolean).join(" "),
+    path: `/track/${year}/${trackSlug}/`,
+    image: trackCard(year, trackSlug),
+    imageAlt: `${name} track, ${e.label}`,
+  });
+}
 
 export default async function Page(props: { params: Promise<{ trackSlug: string; year: string }> }) {
   const params = await props.params;

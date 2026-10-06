@@ -4,6 +4,7 @@ import React from "react";
 import {getCodeCampYears} from "@/lib/staticData/codeCampYears/codeCampYears";
 import {getCodeCampNameWithDate, getCodeCampYearByYearOrCcyId} from "@/lib/utils";
 import {getTrackById} from "@/lib/staticData/sessions/trackDetail";
+import {sanitizeBasicHtml} from "@/lib/sanitize";
 
 export default async function TrackHeader({ year, trackId }: { year: string; trackId: number }) {
   const codeCampYears = await getCodeCampYears();
@@ -25,7 +26,7 @@ export default async function TrackHeader({ year, trackId }: { year: string; tra
           <span className="rd-ss-sr">Track - </span>
           {track?.named}
         </h1>
-        {track?.description && <p className="rd-sub">{track?.description}</p>}
+        {track?.description && <div className="rd-sub" dangerouslySetInnerHTML={{ __html: sanitizeBasicHtml(track.description, true) }} />}
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { withBasePath } from "@/lib/basePath";
+import { HOME_CARD, HOME_CARD_ALT, SITE_DESCRIPTION, SITE_NAME, SITE_ORIGIN } from "@/lib/seo";
 import GoogleAnalytics from "@/app/common/google-analytics";
 
 export function generateViewport() {
@@ -12,36 +13,30 @@ export function generateViewport() {
   };
 }
 
-// The social card (1200x630). metadataBase is the custom domain, which this archive is not served
-// from yet, so on the project-pages build the image is addressed where that site really is.
-// The ?v= changes whenever the card is redrawn (npm run og-card), so sites that cached the old one fetch it again.
-const OG_PATH = "/images/og-svcc.jpg?v=2";
-const OG_IMAGE = {
-  url: process.env.NEXT_PUBLIC_BASE_PATH ? "https://pkellner.github.io" + withBasePath(OG_PATH) : OG_PATH,
-  width: 1200,
-  height: 630,
-  alt: "Silicon Valley Code Camp: 37,954 people, 930 speakers, 2,013 sessions and 17 events. Douglas Crockford spoke at 12 of them.",
-};
+// Site-wide defaults. Every page overrides title, description, canonical URL and card through its own
+// generateMetadata (src/lib/seo.ts); these apply only where a page sets nothing, such as the 404 page.
+const OG_IMAGE = { url: HOME_CARD, width: 1200, height: 630, alt: HOME_CARD_ALT };
 
 export const metadata = {
-  title: "Silicon Valley Code Camp",
-  // The CNAME for the static site is "www" (the apex redirects to it today),
-  // so metadata URLs should resolve there directly (STATIC-SITE-PLAN.md Step 4).
-  metadataBase: new URL("https://www.siliconvalley-codecamp.com"),
-  description: "Silicon Valley Code Camp are community events where developers learn from fellow developers. Both virtual and live sessions.",
+  title: SITE_NAME,
+  // Relative metadata URLs resolve against SITE_ORIGIN: github.io on the project-pages build, the custom domain otherwise.
+  metadataBase: new URL(SITE_ORIGIN),
+  description: SITE_DESCRIPTION,
   // Browsers only probe /favicon.ico at the host root, which misses it when
   // the site is served under a basePath.
   icons: { icon: withBasePath("/favicon.ico") },
 
   openGraph: {
-    title: "Silicon Valley Code Camp are community events where developers learn from fellow developers.",
-    description: "Silicon Valley Code Camp are community events where developers learn from fellow developers. Both virtual and live sessions.",
-    type: "article",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    type: "website",
+    siteName: SITE_NAME,
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Silicon Valley Code Camp are community events where developers learn from fellow developers.",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     images: [OG_IMAGE],
   },
 };

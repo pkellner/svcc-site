@@ -94,7 +94,7 @@ const counts = {};
 for (const line of changedLines) counts[line[0]] = (counts[line[0]] ?? 0) + 1;
 console.log(`  ${changedLines.length} files changed (${Object.entries(counts).map(([k, n]) => `${k}:${n}`).join(" ")})`);
 
-git(["-c", "user.name=Peter Kellner", "-c", "user.email=peter@peterkellner.net", "commit", "-q", "-m", "Deploy static SVCC archive"]);
+git(["-c", "user.name=Peter Kellner", "-c", "user.email=peter@peterkellner.net", "commit", "-q", "-m", "Deploy SVCC site"]);
 git(["push", "origin", "HEAD:gh-pages"]);
 
 console.log(`Deployed. GitHub Pages rebuilds in a minute or two: ${CNAME ? `https://${CNAME}/` : "https://pkellner.github.io/svcc-site/"}`);

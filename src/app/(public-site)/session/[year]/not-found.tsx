@@ -9,8 +9,8 @@ export default function YearNotFound() {
         <div className="rd-ss-chips">
           <span className="rd-chip rd-chip--paper">404</span>
         </div>
-        <h1 className="rd-h1">404 - Page Not Found (for past in year)</h1>
-        <p className="rd-sub">There are no sessions in this archive for that year.</p>
+        <h1 className="rd-h1">No sessions found</h1>
+        <p className="rd-sub">There are no sessions for that year.</p>
         <p style={{ marginTop: 28 }}>
           <Link className="rd-btn" href="/">
             Go to the home page

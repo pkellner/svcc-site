@@ -275,9 +275,9 @@ export default function Home() {
         <i className="rd-hm-deco rd-hm-deco--4" aria-hidden="true" />
         <div className="rd-wrap rd-hm-hero-in">
           <div className="rd-hm-hero-copy">
-            <span className="rd-chip">Read-only archive · 2006–2023</span>
+            <span className="rd-chip">Since 2006 · 17 events</span>
             <h1>
-              Where developers learned from <em>developers.</em>
+              Where developers learn from <em>developers.</em>
             </h1>
             <p className="rd-hm-lede">
               A community coding conference in Silicon Valley. Whole weekends of sessions on everything from JavaScript to machine learning.
@@ -542,7 +542,7 @@ export default function Home() {
                 About Code Camp
               </Link>
               <Link className="rd-btn" href="/news/2019/">
-                Read the news archive
+                Read the news
               </Link>
             </div>
           </div>

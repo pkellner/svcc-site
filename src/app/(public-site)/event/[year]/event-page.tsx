@@ -35,7 +35,7 @@ export default async function EventPage({ year }: { year: string }) {
         </div>
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element -- static export: plain img, basePath applied by hand */}
-          <img className="rd-photo" width={450} src={withBasePath(`/images/eventimages/reduced/${ccy.id}.jpg`)} alt="past event image" />
+          <img className="rd-photo" width={450} src={withBasePath(`/images/eventimages/reduced/${ccy.id}.jpg`)} alt={`${parseInt(ccy.id) > 1000 ? "Silicon Valley Code Campfire: " : ""}${ccy.name} photo`} />
         </div>
       </div>
     </section>

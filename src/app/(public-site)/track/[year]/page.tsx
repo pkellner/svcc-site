@@ -11,12 +11,24 @@ export async function generateStaticParams() {
   return getAllYearTokens();
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ year: string }> }): Promise<Metadata> {
+  const { year } = await props.params;
+  const id = await getCodeCampYearIdByYear(year);
+  const tracks = id ? await getTracksForMeta(id) : [];
+  return eventListingMetadata(year, "Tracks", "track", (e) =>
+    tracks.length ? `The ${tracks.length} tracks at ${e.label}, ${e.date}: sessions grouped by topic.` : `Sessions by topic at ${e.label}, ${e.date}.`,
+  );
+}
 import ConfigDataProvider from "@/app/contexts/ConfigDataContext";
 import {getConfigDataDict} from "@/lib/staticData/configData";
 import TracksHeader from "@/app/(public-site)/track/[year]/TracksHeader";
 import TrackListData from "@/app/(public-site)/track/[year]/TrackListData";
 import {notFound} from "next/navigation";
 import {getTracks} from "@/lib/staticData/sessions/getTracks";
+import type {Metadata} from "next";
+import {eventListingMetadata} from "@/lib/seo";
+import {getTracks as getTracksForMeta} from "@/lib/staticData/sessions/getTracks";
 
 export default async function PageTrack(props: { params: Promise<{ year: string }> }) {
   const params = await props.params;

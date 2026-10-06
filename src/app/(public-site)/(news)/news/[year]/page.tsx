@@ -5,11 +5,18 @@ import {getCodeCampYearByYearOrCcyId} from "@/lib/utils";
 import {notFound} from "next/navigation";
 import {getCodeCampYears} from "@/lib/staticData/codeCampYears/codeCampYears";
 import {getAllYearTokens} from "@/lib/staticData/allYearTokens";
+import type {Metadata} from "next";
+import {eventListingMetadata} from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllYearTokens();
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ year: string }> }): Promise<Metadata> {
+  const { year } = await props.params;
+  return eventListingMetadata(year, "News", "news", (e) => `Announcements, recaps and updates from ${e.label}, ${e.date}.`);
+}
 
 export default async function PageNewsYear(props: { params: Promise<{ year: string }> }) {
   const params = await props.params;

@@ -5,6 +5,9 @@ import SpeakerHeader from "@/app/(public-site)/presenter/[year]/[presenterSlug]/
 import {getUniquePresenters} from "@/lib/staticData/speakers/speakersUtils";
 import {getSessionsData} from "@/lib/staticData/sessions/sessionsUtils";
 import {getCodeCampYears} from "@/lib/staticData/codeCampYears/codeCampYears";
+import type {Metadata} from "next";
+import {eventInfo, pageMetadata, plainText, speakerCard} from "@/lib/seo";
+import {jobLine} from "@/lib/displayText";
 
 // getUniquePresenters, not the unmirrored getSpeakerSlugs (STATIC-SITE-PLAN.md
 // Step 4, BLOCKER): getSpeakerSlugs includes presenters whose sessions are
@@ -22,6 +25,24 @@ export async function generateStaticParams() {
   return params;
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ presenterSlug: string; year: string }> }): Promise<Metadata> {
+  const { year, presenterSlug } = await props.params;
+  const id = idFromSlug(presenterSlug);
+  const speaker = (await getUniquePresenters(year)).find((rec) => rec.id === id);
+  const e = await eventInfo(year);
+  if (!speaker || !e) return {};
+  const name = `${speaker.userFirstName ?? ""} ${speaker.userLastName ?? ""}`.trim();
+  const job = jobLine(speaker.principleJob, speaker.company);
+  return pageMetadata({
+    title: `${name} · ${e.label}`,
+    description: [`${name}${job ? `, ${job},` : ""} spoke at ${e.label}.`, plainText(speaker.userBio)].filter(Boolean).join(" "),
+    path: `/presenter/${year}/${presenterSlug}/`,
+    image: speakerCard(speaker.id),
+    imageAlt: name,
+    type: "profile",
+  });
+}
 
 // Looks up by the trailing id, not by matching the full slug text
 // (STATIC-SITE-PLAN.md Step 4) -- robust to the ~40 speakers whose canonical

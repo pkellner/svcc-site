@@ -1,5 +1,5 @@
 // Static mirror of src/lib/prismaData/common/utils/getUserProfile.ts
-// Anonymous shape: the static archive has no auth, so there is never a
+// Anonymous shape: the static site has no auth, so there is never a
 // logged-in session. Callers destructure this, so shape must match exactly.
 export interface ProfileInfo {
   email: string;

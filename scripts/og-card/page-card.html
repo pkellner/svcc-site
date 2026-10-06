@@ -1,0 +1,135 @@
+<!doctype html>
+<!-- The 1200x630 social card for one page: an event, a track, a speaker or a news post.
+     make-page-cards.mjs opens this page once, then calls render() and takes a screenshot per card. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/repo/styles/redesign-fonts.css">
+<style>
+  :root { --g: #39b449; --o: #f7931d; --b: #23abe1; --p: #91268f; --p2: #bb52b8; --y: #ffd23f; --ink: #0c1226; --ink-2: #48516b; --paper: #fff; --paper-2: #f2f4fa; --line2: #d5dae8; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--ink); }
+  body { position: relative; font-family: "Hanken Grotesk", sans-serif; color: var(--paper); }
+  #bg { position: absolute; inset: 0; }
+
+  .brand { position: absolute; left: 60px; top: 46px; display: flex; align-items: center; gap: 16px; }
+  .tiles { display: flex; gap: 6px; }
+  .tiles b { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; font: 800 18px Unbounded, sans-serif; color: var(--ink); }
+  .brand .name { font: 800 24px Unbounded, sans-serif; letter-spacing: -0.03em; }
+  .pill { background: var(--y); color: var(--ink); border-radius: 999px; padding: 7px 15px; font: 600 17px "JetBrains Mono", monospace; white-space: nowrap; }
+
+  .card { position: absolute; left: 60px; top: 128px; width: 780px; max-height: 456px; overflow: hidden; background: var(--paper); color: var(--ink); border-radius: 30px; padding: 34px 38px 32px; box-shadow: 10px 10px 0 var(--o); }
+  .kicker { font: 600 20px "JetBrains Mono", monospace; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; }
+  h1 { font: 800 50px/1.08 Unbounded, sans-serif; letter-spacing: -0.035em; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .news h1 { font-size: 42px; -webkit-line-clamp: 3; }
+  .sub { margin-top: 14px; font-size: 27px; font-weight: 600; color: var(--ink-2); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .kicker + h1 { margin-top: 12px; }
+
+  .stats { display: flex; gap: 40px; margin-top: 26px; }
+  .stats b { display: block; font: 800 46px Unbounded, sans-serif; letter-spacing: -0.03em; }
+  .stats span { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 21px; font-weight: 600; color: var(--ink-2); }
+  .stats i { width: 13px; height: 13px; border-radius: 3px; }
+  .note { margin-top: 22px; font-size: 22px; font-weight: 600; }
+
+  .list { margin-top: 22px; padding: 0; list-style: none; display: grid; gap: 9px; }
+  .list li { font-size: 22px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 22px; position: relative; }
+  .list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 11px; height: 11px; border-radius: 3px; background: var(--o); }
+
+  .who { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: center; }
+  .who svg { width: 200px; height: 200px; display: block; }
+  .who h1 { font-size: 44px; }
+  .who .sub { font-size: 24px; margin-top: 10px; }
+  .who .meta { margin-top: 10px; font-size: 24px; font-weight: 700; }
+  .yrs { margin-top: 26px; display: grid; grid-template-columns: repeat(15, 1fr); gap: 6px; padding: 0; list-style: none; }
+  .yrs li { display: flex; flex-direction: column; align-items: center; gap: 5px; font: 400 15px "JetBrains Mono", monospace; color: var(--ink-2); }
+  .yrs li.on { color: var(--ink); font-weight: 600; }
+  .yrs i { width: 100%; aspect-ratio: 1; border-radius: 26%; background: var(--paper-2); box-shadow: inset 0 0 0 1.5px var(--line2); }
+  .yrs li.on i { box-shadow: inset 0 0 0 1.5px var(--ink); }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1200" height="630"></canvas>
+<div class="brand">
+  <div class="tiles"><b style="background:var(--g)">S</b><b style="background:var(--o)">V</b><b style="background:var(--b)">C</b><b style="background:var(--p);color:#fff">C</b></div>
+  <div class="name">Silicon Valley Code Camp</div>
+</div>
+<div class="card" id="card"></div>
+<script>
+  const RINGS = ["#39b449", "#f7931d", "#23abe1", "#bb52b8"];
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+  // Specks and one big speaker mark (concentric rings) bleeding off the right edge. Seeded, so the same card
+  // draws the same pixels every run.
+  function background(rings) {
+    const c = document.getElementById("bg").getContext("2d");
+    c.globalAlpha = 1;
+    c.fillStyle = "#0c1226";
+    c.fillRect(0, 0, 1200, 630);
+    let s = 7;
+    const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+    const cols = ["#39b449", "#f7931d", "#23abe1", "#bb52b8", "#ffffff"];
+    for (let i = 0; i < 4200; i++) {
+      c.globalAlpha = 0.16 + rnd() * 0.4;
+      c.fillStyle = cols[Math.floor(rnd() * cols.length)];
+      c.fillRect(Math.floor(rnd() * 1200), Math.floor(rnd() * 630), 2, 2);
+    }
+    c.globalAlpha = 1;
+    // like a speaker mark on the home page: one colored band per ring, with a thin gap between bands
+    const n = Math.max(3, rings), cx = 1080, cy = 360, R = 330, step = R / n;
+    for (let q = n; q >= 1; q--) {
+      c.beginPath();
+      c.arc(cx, cy, step * q - step * 0.32, 0, Math.PI * 2);
+      c.lineWidth = step * 0.64;
+      c.strokeStyle = RINGS[(q - 1) % 4];
+      c.stroke();
+    }
+  }
+
+  // The speaker's mark: one ring per event, around their photo, or around their initials if there is none.
+  function halo(n, photo, initials) {
+    const inner = 64, outer = 98;
+    let h = "";
+    const k = Math.max(1, n);
+    for (let q = k; q >= 1; q--) h += `<circle cx="100" cy="100" r="${(inner + ((outer - inner) * q) / k).toFixed(1)}" fill="${RINGS[(q - 1) % 4]}" stroke="#0c1226" stroke-width="1.2"/>`;
+    if (photo)
+      h += `<defs><clipPath id="pc"><circle cx="100" cy="100" r="62"/></clipPath></defs><circle cx="100" cy="100" r="62" fill="#fff"/>` +
+        `<image href="${esc(photo)}" x="38" y="38" width="124" height="124" clip-path="url(#pc)" preserveAspectRatio="xMidYMid slice"/>`;
+    else
+      h += `<circle cx="100" cy="100" r="62" fill="#f2f4fa" stroke="#0c1226" stroke-width="1.2"/>` +
+        `<text x="100" y="100" dy=".35em" text-anchor="middle" font-family="Unbounded" font-weight="800" font-size="44" letter-spacing="-1.5" fill="#0c1226">${esc(initials)}</text>`;
+    return `<svg viewBox="0 0 200 200">${h}</svg>`;
+  }
+
+  function stats(list) {
+    return `<div class="stats">${list.map(([n, label, color]) => `<div><b>${esc(n)}</b><span><i style="background:${color}"></i>${esc(label)}</span></div>`).join("")}</div>`;
+  }
+
+  // d.type: "event" | "track" | "speaker" | "news". Fields per type are set by make-page-cards.mjs.
+  window.render = async function (d) {
+    background(d.rings ?? 4);
+    const card = document.getElementById("card");
+    card.className = "card " + d.type;
+    let h = "";
+    if (d.type === "event") {
+      h = `<p class="kicker">${esc(d.kicker)}</p><h1>${esc(d.title)}</h1><p class="sub">${esc(d.sub)}</p>` + (d.stats.length ? stats(d.stats) : "") + (d.note ? `<p class="note">${esc(d.note)}</p>` : "");
+    } else if (d.type === "track") {
+      h = `<p class="kicker">${esc(d.kicker)}</p><h1>${esc(d.title)}</h1><p class="sub">${esc(d.sub)}</p><ul class="list">${d.list.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`;
+    } else if (d.type === "speaker") {
+      h = `<div class="who">${halo(d.events, d.photo, d.initials)}<div><h1>${esc(d.title)}</h1>${d.sub ? `<p class="sub">${esc(d.sub)}</p>` : ""}<p class="meta">${esc(d.meta)}</p></div></div>` +
+        `<ol class="yrs">${d.yrs.map((y) => `<li class="${y.color ? "on" : ""}"><i style="${y.color ? "background:" + y.color : ""}"></i>${esc(y.label)}</li>`).join("")}</ol>`;
+    } else if (d.type === "news") {
+      h = `<p class="kicker">${esc(d.kicker)}</p><h1>${esc(d.title)}</h1><p class="sub">${esc(d.sub)}</p>`;
+    }
+    card.innerHTML = h;
+    await Promise.all([...card.querySelectorAll("image")].map((im) => new Promise((ok) => {
+      const i = new Image();
+      i.onload = i.onerror = ok;
+      i.src = im.getAttribute("href");
+    })));
+    await document.fonts.ready;
+    // two frames, so the photo and the text are painted before the screenshot
+    await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
+  };
+</script>
+</body>
+</html>

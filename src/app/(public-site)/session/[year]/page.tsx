@@ -17,7 +17,14 @@ export async function generateStaticParams() {
   return getAllYearTokens();
 }
 export const dynamicParams = false;
+
+export async function generateMetadata(props: { params: Promise<{ year: string }> }): Promise<Metadata> {
+  const { year } = await props.params;
+  return eventListingMetadata(year, "Sessions", "session", (e) => `Every session at ${eventSentence(e)}`);
+}
 import {notFound} from "next/navigation";
+import type {Metadata} from "next";
+import {eventListingMetadata, eventSentence} from "@/lib/seo";
 
 export interface SessionInterest {
   sessionId: number;

@@ -8,7 +8,7 @@ import {DOCK_EVENTS, DOCK_GROUPS, VENUE_NAMES, type DockEvent} from "./eventInde
 // The event dock: a floating bar on every page except home (the home page already links into every
 // event). It names the event you are in, switches between that event's sections, steps to the previous
 // or next event, and has a plain "All events" way home. No login/profile/admin items: this is a static,
-// no-auth archive (STATIC-SITE-PLAN.md Step 4).
+// no-auth static site (STATIC-SITE-PLAN.md Step 4).
 
 type SectionKey = "session" | "presenter" | "track" | "sponsor" | "news" | "about";
 // Icons show only on phones, where the six sections become an even tab bar (24x24, 2px strokes).

@@ -1,6 +1,6 @@
 // The 17 events as the event dock (global-nav.tsx) shows them. A client-side module, so the list ships
 // once in a cached script instead of being serialized into the RSC payload of every page (~15.7k files).
-// The archive is frozen; the counts come from static-data (sessions, unique presenters, tracks per event).
+// The data is static; the counts come from static-data (sessions, unique presenters, tracks per event).
 
 export type Venue = "foothill" | "evergreen" | "paypal" | "campfire";
 

@@ -1,6 +1,6 @@
-// REDESIGN-PLAN.md: the home page datasets, frozen from the "SVCC Home Redesign" prototype.
+// REDESIGN-PLAN.md: the home page datasets, taken from the "SVCC Home Redesign" prototype.
 // The figures were verified against static-data (2,013 sessions / 930 speakers / 305 returning /
-// 17 events / 4,996 people in 2014 / Crockford 12 for 12). The archive never changes, so they are
+// 17 events / 4,996 people in 2014 / Crockford 12 for 12). The past events' data doesn't change, so they are
 // kept here instead of being recomputed at build time.
 
 export type VenueKey = "paypal" | "evergreen" | "foothill" | "campfire";

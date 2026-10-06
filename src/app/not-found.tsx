@@ -11,6 +11,10 @@ import GlobalNav from "@/app/(public-site)/global-nav";
 import { getCurrentCodeCampYear } from "@/lib/staticData/common/utils/getCurrentCodeCampYear";
 import { getCodeCampYears } from "@/lib/staticData/codeCampYears/codeCampYears";
 import { withBasePath } from "@/lib/basePath";
+import { SITE_NAME } from "@/lib/seo";
+
+// Keeps the site-wide description and card from layout.tsx; only the title changes.
+export const metadata = { title: `Page not found · ${SITE_NAME}`, robots: { index: false } };
 
 // STATIC-SITE-PLAN.md Step 4. Renders as out/404.html under static export.
 // An async server component, like every other page, so it can read staticData
@@ -32,8 +36,7 @@ export default async function NotFound() {
             <span className="rd-chip rd-chip--paper">404</span>
             <h1 className="rd-h1">Page not found</h1>
             <p className="rd-sub">
-              This is an archived, read-only copy of the Silicon Valley Code Camp site. The page you asked for doesn&apos;t exist here, or the link may be out of
-              date.
+              We couldn&apos;t find that page. The link may be out of date.
             </p>
             <p style={{ marginTop: 28 }}>
               <Link className="rd-btn rd-btn--b" href="/">

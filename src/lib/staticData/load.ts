@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import path from "path";
+import { normalizeData } from "./normalize";
 
 // Resolved from process.cwd(), not __dirname, because webpack rewrites
 // __dirname for server components under `next build`.
@@ -7,9 +8,12 @@ let _global: any;
 
 // Twitter is X now. Links inside the exported content (news posts, bios, session descriptions,
 // old share links) are rewritten to x.com as the JSON is read, so a re-export needs no extra step.
+// Stored entities and escaped HTML are cleaned up at the same time (normalize.ts).
 function readJson(p: string) {
-  return JSON.parse(
-    readFileSync(p, "utf8").replace(/(https?:\/\/)?(?<![\w.-])(?:www\.|mobile\.)?twitter\.com\//gi, (_m, proto) => (proto ? "https://x.com/" : "x.com/")),
+  return normalizeData(
+    JSON.parse(
+      readFileSync(p, "utf8").replace(/(https?:\/\/)?(?<![\w.-])(?:www\.|mobile\.)?twitter\.com\//gi, (_m, proto) => (proto ? "https://x.com/" : "x.com/")),
+    ),
   );
 }
 const _years: Record<string, any> = {};

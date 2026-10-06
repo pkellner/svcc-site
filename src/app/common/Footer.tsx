@@ -35,9 +35,9 @@ export default function Footer() {
           <span>C</span>
         </div>
         <div className="rd-foot-cols">
-          <p className="rd-foot-say">Seventeen events. 930 speakers. One archive.</p>
+          <p className="rd-foot-say">Seventeen events. 930 speakers. One community.</p>
           <div>
-            <h3>Browse the archive</h3>
+            <h3>Browse</h3>
             <ul>
               {BROWSE.map((item) => (
                 <li key={item.label}>
@@ -76,7 +76,7 @@ export default function Footer() {
           <a href={CODESTARSSUMMIT_URL} target="_blank" rel="noopener">
             CodeStarsSummit
           </a>{" "}
-          and AngularU (tm) are trademarks of 73rd Street Associates (Copyright © 2024 all rights reserved). Built by{" "}
+          and AngularU (tm) are trademarks of 73rd Street Associates (Copyright © 2006–{new Date().getUTCFullYear()} all rights reserved). Built by{" "}
           <a href="https://peterkellner.net" target="_blank" rel="noopener">
             PeterKellner.net
           </a>

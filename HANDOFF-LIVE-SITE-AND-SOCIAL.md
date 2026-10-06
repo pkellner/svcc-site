@@ -1,6 +1,6 @@
 # Handoff: present the site as the live SVCC site, and give every page its own social preview
 
-Status: plan, not started. Written 2026-10-06. Work happens on branch `main` of `pkellner/svcc-site` (see the README's "Two branches — never merge"). Deploying to `gh-pages` needs Peter's say-so (`ALLOW_SVCC_SITE_DEPLOY=1`).
+Status: done (2026-10-06): phases 1–4 and the tests; phase 4 is the "Adding a future event" section of REBUILD-STATIC-SITE.md. While doing it, a site-wide raw-markup bug was found and fixed: 276 session, 378 speaker and 41 track pages showed stored HTML as text ("&amp;", "&lt;p&gt;", "<p>"). The JSON is now cleaned as it is read (`src/lib/staticData/normalize.ts`), stored HTML is always rendered sanitized (`src/gql/common/HtmlNotSafe.tsx`, track header), and `test:meta` fails on any visible markup. Written 2026-10-06. Work happens on branch `main` of `pkellner/svcc-site` (see the README's "Two branches — never merge"). Deploying to `gh-pages` needs Peter's say-so (`ALLOW_SVCC_SITE_DEPLOY=1`).
 
 ## Goals
 
