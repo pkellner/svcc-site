@@ -6,8 +6,6 @@
     "dev": "next dev -p 3100",
     "build:static": "TZ=UTC SHOW_ALL_EVENTS=true next build --webpack && sh scripts/prune-out.sh && node scripts/legacy-speaker-pages.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/og-card/make-page-cards.mjs",
     "build:gh-pages": "TZ=UTC SHOW_ALL_EVENTS=true next build --webpack && sh scripts/prune-out.sh && node scripts/legacy-speaker-pages.mjs && node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/og-card/make-page-cards.mjs",
-    "deploy:gh-pages": "node scripts/deploy-gh-pages.mjs",
-    "deploy:pages": "node scripts/deploy-gh-pages.mjs",
     "test:gh-pages": "node scripts/test-gh-pages.mjs",
     "test:gh-pages:local": "node scripts/test-gh-pages.mjs --local",
     "test:meta": "node scripts/test-meta.mjs",

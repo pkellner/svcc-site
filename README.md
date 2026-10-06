@@ -5,32 +5,26 @@ The Silicon Valley Code Camp (SVCC) website: every year from 2006 to 2019 plus t
 | | |
 |---|---|
 | Live site | https://siliconvalley-codecamp.com/ |
-| Branch `main` | the data (JSON) and the source that builds the site |
-| Branch `gh-pages` | the built site that GitHub Pages serves, plus this README |
-| Original live site | https://www.siliconvalley-codecamp.com |
+| Source | this repo, branch `main`: the data (JSON), the page templates and the build |
+| Publishing | GitHub Actions builds `main` on every push and deploys it to GitHub Pages |
+| Before 2026-10-06 | the same address ran a Next.js app with a database; this static build replaced it |
 
-This repo has everything needed to change and rebuild the site. Nothing else is required: no database, no other repository.
+This repo has everything needed to change and rebuild the site. Nothing else is required: no database, no other repository, no local build.
 
-## Two branches — never merge
+## How it gets published
 
-| | `main` | `gh-pages` |
-|---|---|---|
-| Holds | the data (`static-data/*.json`, the source of truth) and the source that builds the site | the generated site, exactly as GitHub Pages serves it |
-| Who changes it | you, by editing JSON, templates, styles or images | only the deploy script |
-| Default branch on GitHub | no | yes |
+Push to `main` and GitHub does the rest. The workflow in `.github/workflows/deploy.yml`:
 
-**If you are looking at the `gh-pages` branch:** every file here except this README is generated. Don't edit it. A direct edit is overwritten by the next deploy. The data and source are on branch `main`.
+1. checks out `main`, installs the packages (`npm ci`) and Playwright's Chromium (the social cards are drawn in a browser);
+2. runs `npm run typecheck` and `npm run build:gh-pages`, which writes the whole site to `out/`;
+3. runs `npm run test:gh-pages:local` and `npm run test:meta` against `out/`;
+4. uploads `out/` and deploys it to GitHub Pages, which serves it at https://siliconvalley-codecamp.com/.
 
-**Why two branches.** GitHub Pages serves a branch as it is, so the published files have to sit on a branch of their own. Keeping the generated output, which is about 475 MB and changes in thousands of files on every build, off `main` keeps the source history readable. It also means the whole site can be rebuilt from `main` at any time.
+A run takes about ten minutes. If any step fails, nothing is deployed and the site stays as it was. Pushes to other branches run steps 1 to 3 only, so a change can be checked without publishing it. The Actions tab also has a "Run workflow" button for a manual deploy. Pushes that touch only `*.md` files don't trigger a run.
 
-**Never merge them.** The two branches have unrelated histories, because `main` was created as an orphan branch. Never merge either one into the other, never rebase or cherry-pick between them, and never open a pull request from one to the other. The only way changes on `main` reach `gh-pages` is a build followed by a deploy:
+Your machine only pushes the source change. The build output (about 21,000 files, 600 MB) exists only on the GitHub runner and moves from there to Pages; nothing is built or uploaded from your computer. A one-line fix made in the GitHub web editor deploys like any other push.
 
-```bash
-npm run build:gh-pages
-ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages    # only with Peter's say-so; writes CNAME siliconvalley-codecamp.com
-```
-
-The deploy copies this README from `main` onto `gh-pages`, which is why both branches show the same README.
+**Branch `gh-pages`** held the built site until 2026-10-06, when Pages served that branch and a script pushed each build to it. Nothing writes to it any more. Once an Actions deploy has been confirmed, it can be deleted and `main` made the default branch.
 
 ## How it works
 
@@ -43,18 +37,40 @@ The deploy copies this README from `main` onto `gh-pages`, which is why both bra
         |    - next build with output: "export" renders every page to a file
         |    - scripts/prune-out.sh removes files that must never be published
         |    - scripts/legacy-speaker-pages.mjs adds 20 forwarding pages for old speaker URLs
+        |    - scripts/og-card/make-page-cards.mjs draws a social card for every page
         v
- out/                       about 3,900 HTML pages, 21,000 files, about 475 MB (not committed)
+ out/                       about 3,900 HTML pages, 21,000 files, about 600 MB (not committed)
         |
         |  npm run test:gh-pages:local   checks every link and reference in out/
-        |  npm run deploy:gh-pages       pushes out/ to the gh-pages branch
+        |  npm run test:meta             checks titles, social tags and card images
+        |  actions/deploy-pages          (in the workflow) publishes out/
         v
- GitHub Pages (siliconvalley-codecamp.com, from the CNAME the deploy writes)
+ GitHub Pages (siliconvalley-codecamp.com)
 ```
 
-The JSON is the source of truth. It was exported once from the original MySQL database through a privacy whitelist, and the site no longer depends on that database. To change content, edit the JSON (or a template in `src/`) and rebuild. Step-by-step instructions are in [REBUILD-STATIC-SITE.md](REBUILD-STATIC-SITE.md).
+The JSON is the source of truth. It was exported once from the original MySQL database through a privacy whitelist, and the site no longer depends on that database. To change content, edit the JSON (or a template in `src/`), push, and the workflow rebuilds the site.
 
-## Layout (branch `main`)
+## Working locally
+
+Publishing needs nothing on your machine, but to see a change before pushing it:
+
+```bash
+npm run setup                # once: installs the packages and Playwright's Chromium
+npm run dev                  # http://localhost:3100; restart it after editing the JSON
+```
+
+To check the exact files the workflow will deploy, run the same steps it runs:
+
+```bash
+npm run build:gh-pages       # builds out/ (a few minutes)
+npm run serve:out            # http://127.0.0.1:8787/ serves out/ the way Pages will
+npm run test:gh-pages:local
+npm run test:meta
+```
+
+The dev server doesn't produce the social cards or the 20 legacy forwarding pages; only the build does. [REBUILD-STATIC-SITE.md](REBUILD-STATIC-SITE.md) has the full checklist, including the browser test and how to add an event.
+
+## Layout
 
 ```
 static-data/global.json           events, news, per-year config and attendee counts
@@ -69,8 +85,10 @@ styles/                           stylesheets
 scripts/prune-out.sh              removes files that must not be published
 scripts/build-home-data.mjs       regenerates the home page galaxy data from the JSON
 scripts/og-card/make-og-card.mjs  draws the social card public/images/og-svcc.jpg from the built home page
-scripts/deploy-gh-pages.mjs       pushes out/ to gh-pages
+scripts/og-card/make-page-cards.mjs  draws the per-page social cards into out/og/ during the build
 scripts/test-gh-pages*.mjs        local, live and in-browser checks
+scripts/test-meta.mjs             checks every page's title, description and social tags
+.github/workflows/deploy.yml      builds, tests and deploys on every push to main
 ```
 
 ## What the site exposes

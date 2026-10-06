@@ -1,6 +1,5 @@
 node_modules/
 .next/
 out/
-.gh-pages-git/
 next-env.d.ts
 tsconfig.tsbuildinfo

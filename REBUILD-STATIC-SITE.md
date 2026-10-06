@@ -5,12 +5,14 @@ How to change the site and publish it. Everything runs from the root of branch `
 | | |
 |---|---|
 | Data and source | `pkellner/svcc-site`, branch `main` |
-| Published site | https://siliconvalley-codecamp.com/ (branch `gh-pages`) |
+| Published site | https://siliconvalley-codecamp.com/ (GitHub Pages, deployed by GitHub Actions from `main`) |
+
+Publishing is just pushing `main` (step 4). Steps 2 and 3 are local checks you can run first; the workflow runs the same build and tests on GitHub either way.
 
 ## 0. One-time setup
 
-- `npm ci`, then `npx playwright install chromium` (only the browser test needs it).
-- `gh auth login` with push access to `pkellner/svcc-site`.
+- `npm run setup`: installs the packages and Playwright's Chromium (the per-page social cards and the browser test need the browser).
+- Optional: the `gh` CLI, to watch a deploy from the terminal.
 
 No database and no `.env` are needed.
 
@@ -33,7 +35,7 @@ npm run build:gh-pages     # for https://siliconvalley-codecamp.com/ (served fro
 
 This writes `out/` (about 3,900 pages, 21,000 files, about 475 MB), runs `scripts/prune-out.sh` to remove files that must never be published, and adds 20 forwarding pages for speaker addresses the original sitemap spelled differently (`scripts/legacy-speaker-urls.json`).
 
-`npm run build:static` is the same build. The site moved to the custom domain on 2026-10-06; the old `pkellner.github.io/svcc-site/` test address is gone, and the deploy refuses a `/svcc-site` build.
+`npm run build:static` is the same build. The site moved to the custom domain on 2026-10-06; the old `pkellner.github.io/svcc-site/` test address is gone. Never set `NEXT_PUBLIC_BASE_PATH` for a real build.
 
 ## 3. Check before deploying
 
@@ -52,19 +54,15 @@ All three tests must end in `PASS`.
 
 The build also draws a social card for every event, track, speaker and news page into `out/og/` (`scripts/og-card/make-page-cards.mjs`, about a minute). Card URLs carry `?v=` + `OG_VERSION` from `src/lib/seo.ts`; bump it when the card design changes.
 
-## 4. Deploy
+## 4. Deploy: commit and push `main`
 
-`gh-pages` is generated output, and a deploy replaces its contents with `out/` (plus `README.md` from `main`). Anything edited directly on `gh-pages` is lost. So before deploying, check that the remote `gh-pages` head is still the last deploy, and deploy only with Peter's say-so:
-
-```bash
-ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages
-```
-
-This pushes `out/` to `gh-pages`. It's incremental: unchanged files (all the images) aren't re-uploaded. GitHub Pages then publishes in about a minute:
+Commit the JSON and source changes on `main` and push. GitHub Actions (`.github/workflows/deploy.yml`) checks out `main`, runs `typecheck`, builds `out/`, runs `test:gh-pages:local` and `test:meta`, and deploys `out/` to GitHub Pages. It takes about ten minutes, and the live site changes only if every step passes. Watch it in the repo's Actions tab, or:
 
 ```bash
-gh api repos/pkellner/svcc-site/pages/builds/latest --jq '.status+" "+.commit'
+gh run watch
 ```
+
+Nothing is built or uploaded from your machine. To redeploy without a code change, use "Run workflow" on the Actions tab. Pushes to other branches build and test but don't deploy, and pushes that change only `*.md` files don't start a run.
 
 ## 5. Verify the live site
 
@@ -74,13 +72,9 @@ npm run test:gh-pages:browser    # real Chromium on a sample of pages: broken im
 BROWSER_SAMPLE=all BROWSER_CONCURRENCY=8 npm run test:gh-pages:browser   # every page (~45 min)
 ```
 
-GitHub's CDN caches pages for up to 10 minutes. If `test:gh-pages` reports "content differs from out/" right after a deploy, wait and re-run.
+GitHub's CDN caches pages for up to 10 minutes. If `test:gh-pages` reports "content differs from out/" right after a deploy, wait and re-run. These compare the live site with your local `out/`, so build locally from the same commit first.
 
-## 6. Commit
-
-Commit the JSON and source changes on `main` and push `main`. The deploy step publishes the built site to `gh-pages` separately.
-
-Never merge, rebase or cherry-pick between `main` and `gh-pages`, and never open a pull request between them. They have unrelated histories, and the build and deploy above are the only path from one to the other (see "Two branches — never merge" in the README).
+Branch `gh-pages` is a leftover from before 2026-10-06 and is no longer used; don't build on it or merge it.
 
 ## Adding a future event
 

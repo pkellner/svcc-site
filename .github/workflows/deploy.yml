@@ -1,0 +1,56 @@
+# Builds the site from main and publishes it to GitHub Pages.
+# README.md, "How it gets published", explains the flow; REBUILD-STATIC-SITE.md has the local steps.
+name: Build and deploy
+
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One run at a time. A run that is already deploying is never cancelled.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # The per-page social cards (scripts/og-card) are drawn in a browser.
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      - run: npm run build:gh-pages
+      - run: npm run test:gh-pages:local
+      - run: npm run test:meta
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: out
+
+  # Only main is published. Other branches stop after build and tests.
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          # 21,000 files take longer than the default 10 minutes.
+          timeout: 1200000
