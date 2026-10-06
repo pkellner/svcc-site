@@ -68,7 +68,7 @@ function eventCards() {
     if (people) st.push([fmt(people), "people", "#39b449"]);
     return {
       key: `event/${t}`,
-      d: { type: "event", rings: 4, kicker: e.v === "campfire" ? "Online event" : "Event", title: eventTitle(e), sub: e.v === "campfire" ? `${e.date} · Online` : `${e.date} · ${VENUES[e.v].name}`, stats: st, note: e.note },
+      d: { type: "event", rings: 4, kicker: e.v === "campfire" ? "Online event" : "Event", title: eventTitle(e), sub: e.v === "campfire" ? `${e.date} · Online` : `${e.date} · ${VENUES[e.v].name}`, stats: st },
     };
   });
 }

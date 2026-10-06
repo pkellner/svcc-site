@@ -992,7 +992,7 @@ function initGallery(env: Env): Dispose {
       tagSw.style.backgroundColor = VCOL[e.v][0];
       tagName.textContent = e.title;
       tagMeta.textContent = VENUES[e.v].name + " · " + e.date;
-      tagMore.textContent = e.se == null ? e.note : count(e.se, "session") + " · " + count(e.sp || 0, "speaker");
+      tagMore.textContent = e.se == null ? "" : count(e.se, "session") + " · " + count(e.sp || 0, "speaker");
       tag.setAttribute("href", "#events");
     }
   }
@@ -1088,7 +1088,6 @@ function initGallery(env: Env): Dispose {
     return (
       `<div class="rd-hm-pop-top rd-hm-pop-top--ev"><span class="rd-hm-pop-stamp rd-hm-v-${e.v}" aria-hidden="true">${esc(e.stamp)}</span><div>` +
       `<p class="rd-hm-pop-venue">${esc(VENUES[e.v].name)} · ${esc(e.date)}</p><h3 id="rd-hm-pop-h">${esc(e.title)}</h3></div></div>` +
-      (e.note ? `<p class="rd-hm-pop-note">${esc(e.note)}</p>` : "") +
       (e.se != null ? `<dl class="rd-hm-ev-facts"><div><dd>${e.se}</dd><dt>sessions</dt></div><div><dd>${e.sp ?? ""}</dd><dt>speakers</dt></div></dl>` : "") +
       `<p class="rd-hm-ev-go"><a href="${esc(withBasePath(links.l1))}">${esc(links.l1Text)}</a>` +
       (links.l2 ? `<a href="${esc(withBasePath(links.l2))}">Speakers</a>` : "") +
@@ -1819,7 +1818,6 @@ function initEvents(env: Env): Dispose {
     se: env.q("ev-se"),
     sp: env.q("ev-sp"),
     facts: env.q("ev-facts"),
-    note: env.q("ev-note"),
     l1: env.q<HTMLAnchorElement>("ev-l1"),
     l2: env.q<HTMLAnchorElement>("ev-l2"),
     sw: env.q("ev-sw"),
@@ -1985,7 +1983,6 @@ function initEvents(env: Env): Dispose {
     el.venue!.textContent = VENUES[e.v].name;
     el.date!.textContent = e.date;
     el.title!.textContent = e.title;
-    el.note!.textContent = e.note;
     el.facts!.hidden = e.se == null;
     if (e.se != null) {
       el.se!.textContent = String(e.se);

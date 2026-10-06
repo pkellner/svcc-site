@@ -171,9 +171,6 @@ function EventStage() {
         </p>
         <div>
           <h3 data-hm="ev-title">{e.title}</h3>
-          <p className="rd-hm-ev-note" data-hm="ev-note">
-            {e.note}
-          </p>
         </div>
         <dl className="rd-hm-ev-facts" data-hm="ev-facts" hidden={e.se == null}>
           <div>

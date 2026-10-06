@@ -30,7 +30,6 @@ export interface HomeEvent {
   se: number | null;
   sp: number | null;
   img: number;
-  note: string;
 }
 
 /** Fallbacks for the --rd-* tokens the canvases read (the logo colors, then the fourth ring color). */
@@ -48,33 +47,33 @@ export const VENUES: Record<VenueKey, { name: string; years: string }> = {
   campfire: { name: "Online Campfires", years: "2021–2023" },
 };
 
-function camp(y: number, v: VenueKey, date: string, se: number | null, sp: number | null, img: number, note = ""): HomeEvent {
+function camp(y: number, v: VenueKey, date: string, se: number | null, sp: number | null, img: number): HomeEvent {
   const yy = String(y).slice(2);
-  return { slug: String(y), tile: yy, stamp: "'" + yy, title: "Code Camp " + y, v, date, se, sp, img, note };
+  return { slug: String(y), tile: yy, stamp: "'" + yy, title: "Code Camp " + y, v, date, se, sp, img };
 }
-function fire(n: number, mon: string, yy: string, title: string, date: string, se: number, note = ""): HomeEvent {
-  return { slug: "campfire-" + n, tile: yy, mon, stamp: "'" + yy, title, v: "campfire", date, se, sp: se, img: n, note };
+function fire(n: number, mon: string, yy: string, title: string, date: string, se: number): HomeEvent {
+  return { slug: "campfire-" + n, tile: yy, mon, stamp: "'" + yy, title, v: "campfire", date, se, sp: se, img: n };
 }
 
 /** Code Camps newest first, then the three online Campfires. */
 export const EVENTS: readonly HomeEvent[] = [
-  camp(2019, "paypal", "October 19 & 20, 2019", 106, 97, 14, "Year 14, with Douglas Crockford on the bill."),
+  camp(2019, "paypal", "October 19 & 20, 2019", 106, 97, 14),
   camp(2018, "paypal", "October 13 & 14, 2018", 98, 90, 13),
-  camp(2017, "paypal", "October 7 & 8, 2017", 128, 112, 12, "The first year at Town Hall."),
+  camp(2017, "paypal", "October 7 & 8, 2017", 128, 112, 12),
   camp(2016, "evergreen", "October 1 & 2, 2016", 158, 128, 11),
-  camp(2015, "evergreen", "October 3 & 4, 2015", 190, 155, 10, "The first year at Evergreen."),
-  camp(2014, "foothill", "October 11 & 12, 2014", 221, 185, 9, "The biggest crowd ever: 4,996 people."),
-  camp(2013, "foothill", "October 5 & 6, 2013", 229, 185, 8, "The fullest schedule of any year."),
+  camp(2015, "evergreen", "October 3 & 4, 2015", 190, 155, 10),
+  camp(2014, "foothill", "October 11 & 12, 2014", 221, 185, 9),
+  camp(2013, "foothill", "October 5 & 6, 2013", 229, 185, 8),
   camp(2012, "foothill", "October 6 & 7, 2012", 213, 184, 7),
   camp(2011, "foothill", "October 8 & 9, 2011", 209, 175, 6),
   camp(2010, "foothill", "October 9 & 10, 2010", 193, 147, 5),
   camp(2009, "foothill", "October 3 & 4, 2009", 146, 94, 4),
-  camp(2008, "foothill", "November 8 & 9, 2008", 111, 78, 3, "The first full session list on record."),
-  camp(2007, "foothill", "September 2007", null, null, 2, "Back for year two. The session list is not on record."),
-  camp(2006, "foothill", "September 2006", null, null, 1, "The very first Code Camp. The session list is not on record."),
-  fire(1003, "Nov", "23", "Software Architecture", "November 18, 2023", 5, "The most recent event."),
+  camp(2008, "foothill", "November 8 & 9, 2008", 111, 78, 3),
+  camp(2007, "foothill", "September 2007", null, null, 2),
+  camp(2006, "foothill", "September 2006", null, null, 1),
+  fire(1003, "Nov", "23", "Software Architecture", "November 18, 2023", 5),
   fire(1002, "Feb", "23", "Everything ChatGPT", "February 25, 2023", 4),
-  fire(1001, "Oct", "21", "Managing Programmers", "October 2, 2021", 2, "The first Code Campfire."),
+  fire(1001, "Oct", "21", "Managing Programmers", "October 2, 2021", 2),
 ];
 
 /** Site-relative links for an event (the caller adds basePath). */

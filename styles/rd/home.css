@@ -136,7 +136,6 @@
 .rd-home .rd-hm-ev-info.is-out { opacity: 0; }
 .rd-home .rd-hm-ev-venue { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-family: var(--rd-mono); font-weight: 600; font-size: 0.74rem; color: var(--rd-ink-2); }
 .rd-home .rd-hm-ev-info h3 { font-family: var(--rd-display); font-weight: 700; font-size: clamp(1.1rem, 2.2vw, 1.5rem); letter-spacing: -0.03em; line-height: 1.1; text-wrap: balance; }
-.rd-home .rd-hm-ev-note { color: var(--rd-ink-2); font-size: 0.95rem; margin-top: 6px; min-height: 1.5em; }
 .rd-home .rd-hm-ev-facts { display: flex; gap: 22px; margin: 0; text-align: right; }
 .rd-home .rd-hm-ev-facts dd { margin: 0; font-family: var(--rd-display); font-weight: 700; font-size: clamp(1.3rem, 2.6vw, 1.9rem); letter-spacing: -0.04em; line-height: 1; }
 .rd-home .rd-hm-ev-facts dt { font-family: var(--rd-mono); font-weight: 400; font-size: 0.68rem; color: var(--rd-ink-2); margin-top: 4px; }
@@ -313,7 +312,6 @@
 @keyframes rd-hm-pop-in { from { opacity: 0; transform: scale(0.3) rotate(-14deg); } }
 .rd-home .rd-hm-pop-stamp { width: 66px; aspect-ratio: 1; display: grid; place-items: center; border: 2px solid var(--rd-ink); border-radius: 22%; box-shadow: 4px 4px 0 var(--rd-ink); font-family: var(--rd-display); font-weight: 800; font-size: 1.3rem; letter-spacing: -0.04em; transform: rotate(-8deg); }
 .rd-home .rd-hm-pop.is-open .rd-hm-pop-stamp { animation: rd-hm-pop-in 0.55s var(--rd-ease) 0.1s backwards; }
-.rd-home .rd-hm-pop-note { color: var(--rd-ink-2); font-size: 0.93rem; margin-top: 12px; }
 .rd-home .rd-hm-pop .rd-hm-ev-facts { gap: 26px; margin-top: 12px; text-align: left; }
 .rd-home .rd-hm-pop .rd-hm-ev-go { margin-top: 16px; }
 .rd-home .rd-hm-scrim { position: fixed; inset: 0; z-index: 1000; background: rgba(12, 18, 38, 0.6); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
