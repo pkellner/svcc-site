@@ -1,6 +1,6 @@
 
 (function () {
-  var base = "/svcc-site";
+  var base = "";
   var path = window.location.pathname;
   if (base && path.indexOf(base + "/") === 0) path = path.slice(base.length);
   var requested = path;

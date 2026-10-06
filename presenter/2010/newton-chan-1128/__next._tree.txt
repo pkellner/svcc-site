@@ -1,4 +1,4 @@
-:HL["/svcc-site/_next/static/css/565f4925fe90494c.css","style"]
-:HL["/svcc-site/_next/static/css/22702ba8e2465d1d.css","style"]
-:HL["/svcc-site/_next/static/css/d2c3199433c4a635.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(public-site)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"presenter","param":null,"prefetchHints":4192,"slots":{"children":{"name":"year","param":{"type":"d","key":"2010","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"presenterSlug","param":{"type":"d","key":"newton-chan-1128","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"AI2ErbEi3b_UorxKdCinT"}
+:HL["/_next/static/css/565f4925fe90494c.css","style"]
+:HL["/_next/static/css/b6a746ddeac7d32f.css","style"]
+:HL["/_next/static/css/e2b3ca17d473ea69.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(public-site)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"presenter","param":null,"prefetchHints":4192,"slots":{"children":{"name":"year","param":{"type":"d","key":"2010","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"presenterSlug","param":{"type":"d","key":"newton-chan-1128","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"EZMG4FoSPm73mcW4zpfc8"}
