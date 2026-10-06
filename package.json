@@ -15,6 +15,7 @@
     "test:static": "NEXT_PUBLIC_BASE_PATH= GH_PAGES_URL=${PAGES_URL:-https://www.siliconvalley-codecamp.com} node scripts/test-gh-pages.mjs",
     "test:static:browser": "NEXT_PUBLIC_BASE_PATH= GH_PAGES_URL=${PAGES_URL:-https://www.siliconvalley-codecamp.com} node scripts/test-gh-pages-browser.mjs",
     "home-data": "node scripts/build-home-data.mjs",
+    "og-card": "node scripts/og-card/make-og-card.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "setup": "npm install && npx playwright install chromium"

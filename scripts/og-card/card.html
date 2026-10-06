@@ -1,0 +1,100 @@
+<!doctype html>
+<!-- The 1200x630 social card (public/images/og-svcc.jpg). make-og-card.mjs opens this page, calls
+     render() with the speaker cluster captured from the built home page, and screenshots it. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/repo/styles/redesign-fonts.css">
+<style>
+  :root { --g: #39b449; --o: #f7931d; --b: #23abe1; --p: #91268f; --y: #ffd23f; --ink: #0c1226; --ink-2: #48516b; --paper: #fff; --paper-2: #f2f4fa; --line2: #d5dae8; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--ink); }
+  body { position: relative; font-family: "Hanken Grotesk", sans-serif; color: var(--paper); }
+  #specks, #cluster, #wire { position: absolute; inset: 0; }
+  #cluster { left: auto; top: auto; border-radius: 50%; }
+
+  .left { position: absolute; left: 60px; top: 52px; width: 600px; }
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .tiles { display: flex; gap: 7px; }
+  .tiles b { width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center; font: 800 21px Unbounded, sans-serif; color: var(--ink); }
+  .pill { background: var(--y); color: var(--ink); border-radius: 999px; padding: 8px 16px; font: 600 18px "JetBrains Mono", monospace; }
+  h1 { margin-top: 30px; font: 800 66px/1.02 Unbounded, sans-serif; letter-spacing: -0.035em; }
+  h1 span { display: inline-block; margin-top: 12px; background: var(--g); color: var(--ink); border-radius: 18px; padding: 4px 20px 10px; box-shadow: 7px 7px 0 var(--o); transform: rotate(-1.5deg); }
+  .tagline { margin-top: 34px; font-weight: 600; font-size: 29px; }
+  .stats { display: flex; gap: 34px; margin-top: 30px; }
+  .stats b { display: block; font: 800 42px Unbounded, sans-serif; letter-spacing: -0.03em; }
+  .stats span { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 21px; font-weight: 600; color: #c9cfe0; }
+  .stats i { width: 13px; height: 13px; border-radius: 3px; }
+
+  .pop { position: absolute; background: var(--paper); color: var(--ink); border-radius: 26px; padding: 20px 22px 16px; box-shadow: 8px 8px 0 var(--o); display: grid; grid-template-columns: 92px 1fr; gap: 14px 18px; align-items: center; width: 476px; }
+  .pop svg.halo { width: 92px; height: 92px; display: block; }
+  .pop h2 { font: 700 28px/1.1 Unbounded, sans-serif; letter-spacing: -0.03em; }
+  .pop p { margin-top: 7px; font-size: 22px; font-weight: 600; color: var(--ink-2); }
+  .yrs { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(15, 1fr); gap: 4px; padding: 0; list-style: none; }
+  .yrs li { display: flex; flex-direction: column; align-items: center; gap: 4px; font: 400 12px "JetBrains Mono", monospace; color: var(--ink-2); }
+  .yrs li.on { color: var(--ink); font-weight: 600; }
+  .yrs i { width: 100%; aspect-ratio: 1; border-radius: 26%; background: var(--paper-2); box-shadow: inset 0 0 0 1.5px var(--line2); }
+  .yrs li.on i { box-shadow: inset 0 0 0 1.5px var(--ink); }
+</style>
+</head>
+<body>
+<canvas id="specks" width="1200" height="630"></canvas>
+<img id="cluster" alt="">
+<svg id="wire" width="1200" height="630"></svg>
+<div class="left">
+  <div class="brand">
+    <div class="tiles"><b style="background:var(--g)">S</b><b style="background:var(--o)">V</b><b style="background:var(--b)">C</b><b style="background:var(--p);color:#fff">C</b></div>
+    <div class="pill">2006–2023 · the whole archive</div>
+  </div>
+  <h1>Silicon Valley<br><span>Code Camp</span></h1>
+  <p class="tagline">Where developers learned from developers.</p>
+  <div class="stats" id="stats"></div>
+</div>
+<div class="pop" id="pop"></div>
+<script>
+  // Confetti specks, one field like the home page's crowd. Seeded so every run draws the same card.
+  function specks() {
+    const c = document.getElementById("specks").getContext("2d");
+    let s = 7;
+    const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+    const cols = ["#39b449", "#f7931d", "#23abe1", "#bb52b8", "#ffffff"];
+    for (let i = 0; i < 5200; i++) {
+      c.globalAlpha = 0.18 + rnd() * 0.42;
+      c.fillStyle = cols[Math.floor(rnd() * cols.length)];
+      c.fillRect(Math.floor(rnd() * 1200), Math.floor(rnd() * 630), 2, 2);
+    }
+  }
+
+  // d: { cluster: dataURL, ring: {x, y, r} (fractions of the cluster image), name, meta, svg, yrs: [{label, color}], stats: [[n, label, color]] }
+  window.render = async function (d) {
+    specks();
+    document.getElementById("stats").innerHTML = d.stats.map(([n, label, color]) => `<div><b>${n}</b><span><i style="${color === "ring" ? "background:#f7931d;border-radius:50%;box-shadow:0 0 0 2.5px #23abe1" : "background:" + color}"></i>${label}</span></div>`).join("");
+
+    // the speaker cluster: a disc bleeding off the right edge, the chosen speaker's ring near its middle
+    const D = 620, cx = 985, cy = 360;
+    const img = document.getElementById("cluster");
+    img.style.width = img.style.height = D + "px";
+    img.style.left = cx - D / 2 + "px";
+    img.style.top = cy - D / 2 + "px";
+    img.src = d.cluster;
+    await img.decode();
+    const rx = cx - D / 2 + d.ring.x * D, ry = cy - D / 2 + d.ring.y * D, rr = d.ring.r * D;
+
+    // the popup card above the ring, with a wire from its corner to the ring
+    const pop = document.getElementById("pop");
+    pop.innerHTML =
+      d.svg.replace("<svg", '<svg class="halo"') +
+      `<div><h2>${d.name}</h2><p>${d.meta}</p></div>` +
+      `<ol class="yrs">${d.yrs.map((y) => `<li class="${y.color ? "on" : ""}"><i style="${y.color ? "background:" + y.color : ""}"></i>${y.label}</li>`).join("")}</ol>`;
+    pop.style.left = "688px";
+    pop.style.top = "34px";
+    const pb = pop.getBoundingClientRect();
+    const x0 = pb.left + 70, y0 = pb.bottom + 2, x1 = rx - rr * 0.55, y1 = ry - rr * 0.83;
+    document.getElementById("wire").innerHTML =
+      `<path d="M${x0},${y0} C${x0},${(y0 + y1) / 2} ${x1},${(y0 + y1) / 2 - 10} ${x1},${y1}" fill="none" stroke="#fff" stroke-width="2.5" opacity=".85"/>` +
+      `<circle cx="${x0}" cy="${y0 + 2}" r="5" fill="#fff"/>`;
+    await document.fonts.ready;
+  };
+</script>
+</body>
+</html>

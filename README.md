@@ -11,6 +11,27 @@ An archive of the Silicon Valley Code Camp (SVCC) website: every year from 2006 
 
 This repo has everything needed to change and rebuild the site. Nothing else is required: no database, no other repository.
 
+## Two branches — never merge
+
+| | `main` | `gh-pages` |
+|---|---|---|
+| Holds | the data (`static-data/*.json`, the source of truth) and the source that builds the site | the generated site, exactly as GitHub Pages serves it |
+| Who changes it | you, by editing JSON, templates, styles or images | only the deploy script |
+| Default branch on GitHub | no | yes |
+
+**If you are looking at the `gh-pages` branch:** every file here except this README is generated. Don't edit it. A direct edit is overwritten by the next deploy. The data and source are on branch `main`.
+
+**Why two branches.** GitHub Pages serves a branch as it is, so the published files have to sit on a branch of their own. Keeping the generated output, which is about 475 MB and changes in thousands of files on every build, off `main` keeps the source history readable. It also means the whole site can be rebuilt from `main` at any time.
+
+**Never merge them.** The two branches have unrelated histories, because `main` was created as an orphan branch. Never merge either one into the other, never rebase or cherry-pick between them, and never open a pull request from one to the other. The only way changes on `main` reach `gh-pages` is a build followed by a deploy:
+
+```bash
+npm run build:gh-pages
+ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages    # only with Peter's say-so
+```
+
+The deploy copies this README from `main` onto `gh-pages`, which is why both branches show the same README.
+
 ## How it works
 
 ```
@@ -47,6 +68,7 @@ src/lib/basePath.ts               base-path helpers for hosting under /svcc-site
 styles/                           stylesheets
 scripts/prune-out.sh              removes files that must not be published
 scripts/build-home-data.mjs       regenerates the home page galaxy data from the JSON
+scripts/og-card/make-og-card.mjs  draws the social card public/images/og-svcc.jpg from the built home page
 scripts/deploy-gh-pages.mjs       pushes out/ to gh-pages
 scripts/test-gh-pages*.mjs        local, live and in-browser checks
 ```

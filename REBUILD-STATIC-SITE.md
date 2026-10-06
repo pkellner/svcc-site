@@ -19,6 +19,7 @@ No database and no `.env` are needed.
 - **Content** (a news post, a session, a speaker bio): edit `static-data/global.json` (events and news, key `allNewsData`) or `static-data/years/<token>.json` (sessions, speakers, tracks, sponsors for one event).
 - **A page's layout or wording**: edit the template under `src/app/(public-site)/`.
 - **An image**: replace the file under `public/`.
+- **The social card** (`public/images/og-svcc.jpg`): edit `scripts/og-card/card.html` if needed, run `npm run build:gh-pages` then `npm run og-card` (it draws the card from the built home page), bump the `?v=` in `OG_PATH` in `src/app/layout.tsx` so sites that cached the old card fetch the new one, and build again.
 
 If a session or speaker changed, also run `npm run home-data`. It regenerates the home page galaxy data (`public/home/sessions.json` and the speaker rows in `src/app/(public-site)/home/homeData.ts`) from the JSON. On unchanged data it changes nothing.
 
@@ -44,7 +45,7 @@ This must end in `PASS`. It checks that every link, image and redirect in every 
 
 ## 4. Deploy
 
-Peter may edit the `gh-pages` branch directly, and a deploy replaces it with `out/`. So before deploying, check that the remote `gh-pages` head is still the last deploy, and deploy only with Peter's say-so:
+`gh-pages` is generated output, and a deploy replaces its contents with `out/` (plus `README.md` from `main`). Anything edited directly on `gh-pages` is lost. So before deploying, check that the remote `gh-pages` head is still the last deploy, and deploy only with Peter's say-so:
 
 ```bash
 ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages
@@ -68,7 +69,9 @@ GitHub's CDN caches pages for up to 10 minutes. If `test:gh-pages` reports "cont
 
 ## 6. Commit
 
-Commit the JSON and source changes on `main`. The deploy step publishes the built site to `gh-pages` separately.
+Commit the JSON and source changes on `main` and push `main`. The deploy step publishes the built site to `gh-pages` separately.
+
+Never merge, rebase or cherry-pick between `main` and `gh-pages`, and never open a pull request between them. They have unrelated histories, and the build and deploy above are the only path from one to the other (see "Two branches — never merge" in the README).
 
 ## Gotchas
 
