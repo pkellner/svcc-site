@@ -1,10 +1,10 @@
-# Silicon Valley Code Camp: static, read-only archive
+# Silicon Valley Code Camp: the SVCC site (static build)
 
-An archive of the Silicon Valley Code Camp (SVCC) website: every year from 2006 to 2019 plus the three "campfire" events, about 3,900 pages covering 2,013 sessions, 930 speakers, tracks, sponsors and news. It is plain HTML, CSS and JavaScript files. There is no database, no server and no login.
+The Silicon Valley Code Camp (SVCC) website: every year from 2006 to 2019 plus the three "campfire" events, about 3,900 pages covering 2,013 sessions, 930 speakers, tracks, sponsors and news. It is plain HTML, CSS and JavaScript files. There is no database, no server and no login.
 
 | | |
 |---|---|
-| Live archive | https://pkellner.github.io/svcc-site/ |
+| Live site | https://pkellner.github.io/svcc-site/ |
 | Branch `main` | the data (JSON) and the source that builds the site |
 | Branch `gh-pages` | the built site that GitHub Pages serves, plus this README |
 | Original live site | https://www.siliconvalley-codecamp.com |
@@ -35,7 +35,7 @@ The deploy copies this README from `main` onto `gh-pages`, which is why both bra
 ## How it works
 
 ```
- static-data/*.json         the archive's data: years, sessions, speakers, tracks, sponsors, news
+ static-data/*.json         the site's data: years, sessions, speakers, tracks, sponsors, news
  public/                    images and files served as they are
  src/                       Next.js page templates that turn the JSON into pages
         |
@@ -52,7 +52,7 @@ The deploy copies this README from `main` onto `gh-pages`, which is why both bra
  GitHub Pages (pkellner.github.io/svcc-site/)
 ```
 
-The JSON is the source of truth. It was exported once from the original MySQL database through a privacy whitelist, and the database is no longer used. To change content, edit the JSON (or a template in `src/`) and rebuild. Step-by-step instructions are in [REBUILD-STATIC-SITE.md](REBUILD-STATIC-SITE.md).
+The JSON is the source of truth. It was exported once from the original MySQL database through a privacy whitelist, and the site no longer depends on that database. To change content, edit the JSON (or a template in `src/`) and rebuild. Step-by-step instructions are in [REBUILD-STATIC-SITE.md](REBUILD-STATIC-SITE.md).
 
 ## Layout (branch `main`)
 
@@ -73,7 +73,7 @@ scripts/deploy-gh-pages.mjs       pushes out/ to gh-pages
 scripts/test-gh-pages*.mjs        local, live and in-browser checks
 ```
 
-## What the archive exposes
+## What the site exposes
 
 The data covers only people who appear as a speaker (930 people). The original attendee table, with tens of thousands of registrants, is not included: no names, no photos and no per-person records. The only trace of other attendees is a head count per year.
 
@@ -88,6 +88,6 @@ Not included: email address fields, phone fields, password hashes, zip code, cit
 
 ## Limits and notes
 
-- **Content is frozen.** There are no forms, registration, comments or search. External links (speaker sites, session materials) may rot; about 47 links were already dead on the original site.
+- **Static: no forms, logins or search.** There is no registration, comments or search. External links (speaker sites, session materials) may rot; about 47 links were already dead on the original site.
 - **Analytics.** Pages load Google Analytics (measurement id hardcoded, because a static build has no runtime environment).
-- **Search engines.** `sitemap.xml` and `og:image` use absolute `https://www.siliconvalley-codecamp.com` URLs, and a `robots.txt` under `/svcc-site/` is ignored by crawlers, so search engines find the archive only through links to it.
+- **Search engines.** `sitemap.xml` uses absolute `https://www.siliconvalley-codecamp.com` URLs, and a `robots.txt` under `/svcc-site/` is ignored by crawlers, so search engines find the site at `pkellner.github.io/svcc-site/` only through links to it.
