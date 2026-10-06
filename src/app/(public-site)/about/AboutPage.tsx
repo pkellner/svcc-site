@@ -1,4 +1,5 @@
 import { withBasePath } from "@/lib/basePath";
+import { LAST_UPDATED_ISO, LAST_UPDATED_TEXT } from "@/lib/lastUpdated";
 
 export default function AboutPage({}) {
   return (
@@ -33,6 +34,9 @@ export default function AboutPage({}) {
               For Additional Information, please email: <a href="mailto:service2019@siliconvalley-codecamp.com">service2019@siliconvalley-codecamp.com</a>
             </p>
           </div>
+          <p className="rd-about-updated">
+            Site last updated <time dateTime={LAST_UPDATED_ISO}>{LAST_UPDATED_TEXT}</time>
+          </p>
         </div>
       </div>
     </section>

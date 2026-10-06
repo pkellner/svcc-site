@@ -60,6 +60,7 @@
 .rd-about-pic .rd-tiles span { border: 2px solid var(--rd-ink); font-size: 13px; }
 .rd-about-card .rd-h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 14px; }
 .rd-about-card .rd-prose + .rd-h2 { margin-top: 28px; }
+.rd-about-card .rd-about-updated { margin: 32px 0 0; font-family: var(--rd-mono); font-size: 0.72rem; color: var(--rd-ink-2); }
 
 /* ---------- event ---------- */
 .rd-event { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
