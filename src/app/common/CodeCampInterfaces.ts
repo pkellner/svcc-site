@@ -198,6 +198,7 @@ export interface SessionPresenter {
 }
 
 export interface Session {
+  slug?: string; // the stored URL slug, attached as the year file is read (load.ts)
   level: string;
   approved: boolean;
   codeCampYearId: number;

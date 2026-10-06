@@ -86,7 +86,7 @@ export default async function SessionExpandedItem({
       <li key={session.id} className={width100 ? "rd-card rd-ss-wide" : "rd-card"}>
         <div className="rd-ss-body">
           <h3 className="rd-h3 rd-ss-title">
-            <Link href={`/session/${year}/${generateSlug(session.title)}`}>{session?.title}</Link>
+            <Link href={`/session/${year}/${(session.slug ?? generateSlug(session.title))}`}>{session?.title}</Link>
           </h3>
 
           <ul className="rd-ss-speakers" aria-label="Speakers">

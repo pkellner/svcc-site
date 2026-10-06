@@ -47,6 +47,7 @@ interface SessionVideo {
 }
 
 export interface Session {
+  slug?: string; // the stored URL slug, attached as the year file is read (load.ts)
   codeCampYearId: number;
   allowHtml: boolean;
   description: string;

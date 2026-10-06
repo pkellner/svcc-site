@@ -27,7 +27,15 @@ const TEXT_FIELDS = new Set(["title", "named", "userFirstName", "userLastName", 
 const ENTITY = /&(?:#\d+|#x[0-9a-f]+|quot|amp|lt|gt|apos|nbsp);/i;
 const ESCAPED_TAG = /&lt;\/?[a-z][a-z0-9]*(?:\s[^&]*?)?\/?&gt;/i;
 
+// Three images the export pointed at the CodeStarsSummit site, which does not have them; this site does.
+const MOVED_IMAGES: [RegExp, string][] = [
+  [/https:\/\/codestarssummit-static\.github\.io\/codestarssummit-static\/Images\/evergreenoverviewmap\.png/g, "/images/evergreenoverviewmap.png"],
+  [/https:\/\/codestarssummit-static\.github\.io\/codestarssummit-static\/images\/svcc2015thumb\.png/g, "/images/svcc2015thumb.png"],
+  [/https:\/\/codestarssummit-static\.github\.io\/codestarssummit-static\/miscpages\/crockford\.png/g, "/miscpages/Crockford.png"],
+];
+
 function clean(key: string, value: string): string {
+  for (const [from, to] of MOVED_IMAGES) value = value.replace(from, to); // in HTML and in pictureUrl
   if (TEXT_FIELDS.has(key) && ENTITY.test(value)) return decodeEntities(value);
   if (HTML_FIELDS.has(key) && ESCAPED_TAG.test(value)) return decodeEntities(value);
   if (SUMMARY_FIELDS.has(key) && (ENTITY.test(value) || /<[a-z/!]/i.test(value))) {

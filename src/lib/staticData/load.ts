@@ -33,7 +33,13 @@ export function year(token: string): any | undefined {
   if (!(token in _years)) {
     const p = path.join(process.cwd(), "static-data", "years", `${token}.json`);
     try {
-      _years[token] = readJson(p);
+      const y = readJson(p);
+      // Each session's URL slug, as stored. Pages link with this rather than a slug made from the title:
+      // the stored slugs were made from the original (sometimes entity-encoded) titles that
+      // normalize.ts cleans up, so a slug made from the cleaned title can point at no page.
+      const slugById = new Map<number, string>((y?.sessionSlugs ?? []).map((s: any) => [s.sessionId, s.sessionSlug]));
+      for (const s of y?.sessions ?? []) s.slug = slugById.get(s.id);
+      _years[token] = y;
     } catch {
       _years[token] = undefined;
     }

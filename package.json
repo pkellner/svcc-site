@@ -11,6 +11,8 @@
     "test:gh-pages": "node scripts/test-gh-pages.mjs",
     "test:gh-pages:local": "node scripts/test-gh-pages.mjs --local",
     "test:meta": "node scripts/test-meta.mjs",
+    "serve:out": "node scripts/serve-out.mjs",
+    "test:browser:local": "GH_PAGES_URL=http://127.0.0.1:8787/svcc-site BROWSER_SAMPLE=all BROWSER_CONCURRENCY=8 node scripts/test-gh-pages-browser.mjs",
     "test:gh-pages:browser": "node scripts/test-gh-pages-browser.mjs",
     "test:static:local": "NEXT_PUBLIC_BASE_PATH= node scripts/test-gh-pages.mjs --local",
     "test:static": "NEXT_PUBLIC_BASE_PATH= GH_PAGES_URL=${PAGES_URL:-https://www.siliconvalley-codecamp.com} node scripts/test-gh-pages.mjs",

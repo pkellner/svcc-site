@@ -60,7 +60,7 @@ export default function SessionListItem({
       <article className="rd-card rd-ss-row">
         <div>
           <h3 className="rd-h3 rd-ss-title session-title">
-            <Link href={`/session/${year}/${generateSlug(session.title)}`}>{session.title}</Link>
+            <Link href={`/session/${year}/${(session.slug ?? generateSlug(session.title))}`}>{session.title}</Link>
           </h3>
           <p className="rd-ss-names">
             <span className="rd-ss-sr">
@@ -112,7 +112,7 @@ export default function SessionListItem({
               Video
             </a>
           )}
-          <Link className="rd-btn rd-btn--sm rd-btn--b" href={`/session/${year}/${generateSlug(session.title)}`} aria-label={`Details: ${session.title}`}>
+          <Link className="rd-btn rd-btn--sm rd-btn--b" href={`/session/${year}/${(session.slug ?? generateSlug(session.title))}`} aria-label={`Details: ${session.title}`}>
             Details {profile.isAdmin && `(${session.id})-interestLevel-${interestLevel}`}
           </Link>
         </div>

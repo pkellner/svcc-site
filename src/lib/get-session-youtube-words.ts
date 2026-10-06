@@ -1,6 +1,7 @@
 import {generateSlug} from "@/app/common/generate-slug";
 
 type Session = {
+  slug?: string;
   sessionTime: any;
   id: number;
   title: string;
@@ -37,7 +38,7 @@ export function getSessionYouTubeWords(session: Session, codeCampYear: string) {
 
   let strTalks = session.sessionPresenter.length > 1 ? " Talks" : " Talk";
 
-  let sessionUrl = `/session/${codeCampYear}/${generateSlug(session?.title)}`;
+  let sessionUrl = `/session/${codeCampYear}/${(session?.slug ?? generateSlug(session?.title))}`;
 
   let sessionMaterial = session.sessionsMaterialUrl ? `Session Materials:\n${session.sessionsMaterialUrl}\n` : "";
   let sb: string[] = [];

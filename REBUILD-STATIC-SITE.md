@@ -40,11 +40,14 @@ This writes `out/` (about 3,900 pages, 21,000 files, about 475 MB), runs `script
 ```bash
 npm run test:gh-pages:local
 npm run test:meta
+npm run serve:out              # leave running, then in another terminal:
+npm run test:browser:local     # every page in real Chromium against the local build (~20 min)
 ```
 
-Both must end in `PASS`.
+All three tests must end in `PASS`.
 
 - `test:gh-pages:local` checks that every link, image and redirect in every page carries the base path and points at a file that exists in `out/`. Links that don't exist are compared with the original site: it fails if the original serves them, and warns if they're dead there too.
+- `test:browser:local` loads every page of the local build in Chromium and fails on broken images, links that 404 and wrong redirects. It catches what the file checks can't: links the browser builds after the page loads. Run it before every deploy; on 2026-10-06 a deploy without it published 404 session links.
 - `test:meta` checks every page's title, description, canonical, `og:*` and `twitter:*` tags, that every `og:image` is a 1200x630 JPEG in `out/`, that no page shows raw markup (`&amp;`, `<p>` as text), and that no page calls the site an archive.
 
 The build also draws a social card for every event, track, speaker and news page into `out/og/` (`scripts/og-card/make-page-cards.mjs`, about a minute). Card URLs carry `?v=` + `OG_VERSION` from `src/lib/seo.ts`; bump it when the card design changes.

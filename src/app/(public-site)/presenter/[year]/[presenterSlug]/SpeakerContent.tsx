@@ -60,7 +60,7 @@ export default async function SpeakerContent({
                   <li key={session?.id} className="rd-card rd-spk-session">
                     <h3 className="rd-h3">
                       <Link
-                        as={`/session/${year}/${generateSlug(session?.title)}`}
+                        as={`/session/${year}/${(session?.slug ?? generateSlug(session?.title))}`}
                         href={{
                           pathname: "/session",
                           query: {
