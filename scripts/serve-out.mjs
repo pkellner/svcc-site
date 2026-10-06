@@ -8,7 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const OUT = path.resolve(import.meta.dirname, "..", "out");
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "/svcc-site";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const PORT = Number(process.env.PORT || 8787);
 const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".jpg": "image/jpeg", ".png": "image/png", ".gif": "image/gif", ".webp": "image/webp", ".woff2": "font/woff2", ".svg": "image/svg+xml", ".json": "application/json", ".txt": "text/plain", ".ico": "image/x-icon", ".pdf": "application/pdf", ".xml": "application/xml" };
 

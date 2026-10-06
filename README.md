@@ -4,7 +4,7 @@ The Silicon Valley Code Camp (SVCC) website: every year from 2006 to 2019 plus t
 
 | | |
 |---|---|
-| Live site | https://pkellner.github.io/svcc-site/ |
+| Live site | https://siliconvalley-codecamp.com/ |
 | Branch `main` | the data (JSON) and the source that builds the site |
 | Branch `gh-pages` | the built site that GitHub Pages serves, plus this README |
 | Original live site | https://www.siliconvalley-codecamp.com |
@@ -27,7 +27,7 @@ This repo has everything needed to change and rebuild the site. Nothing else is 
 
 ```bash
 npm run build:gh-pages
-ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages    # only with Peter's say-so
+ALLOW_SVCC_SITE_DEPLOY=1 npm run deploy:gh-pages    # only with Peter's say-so; writes CNAME siliconvalley-codecamp.com
 ```
 
 The deploy copies this README from `main` onto `gh-pages`, which is why both branches show the same README.
@@ -49,7 +49,7 @@ The deploy copies this README from `main` onto `gh-pages`, which is why both bra
         |  npm run test:gh-pages:local   checks every link and reference in out/
         |  npm run deploy:gh-pages       pushes out/ to the gh-pages branch
         v
- GitHub Pages (pkellner.github.io/svcc-site/)
+ GitHub Pages (siliconvalley-codecamp.com, from the CNAME the deploy writes)
 ```
 
 The JSON is the source of truth. It was exported once from the original MySQL database through a privacy whitelist, and the site no longer depends on that database. To change content, edit the JSON (or a template in `src/`) and rebuild. Step-by-step instructions are in [REBUILD-STATIC-SITE.md](REBUILD-STATIC-SITE.md).
@@ -64,7 +64,7 @@ src/app/(public-site)/            every public page
 src/app/not-found.tsx             404 page that recovers old URLs
 src/lib/staticData/               reads static-data/*.json for the pages
 src/lib/sanitize.ts               the HTML allowlist for news, session and bio text
-src/lib/basePath.ts               base-path helpers for hosting under /svcc-site/
+src/lib/basePath.ts               base-path helpers (no-ops: the site is served from the root)
 styles/                           stylesheets
 scripts/prune-out.sh              removes files that must not be published
 scripts/build-home-data.mjs       regenerates the home page galaxy data from the JSON
@@ -90,4 +90,4 @@ Not included: email address fields, phone fields, password hashes, zip code, cit
 
 - **Static: no forms, logins or search.** There is no registration, comments or search. External links (speaker sites, session materials) may rot; about 47 links were already dead on the original site.
 - **Analytics.** Pages load Google Analytics (measurement id hardcoded, because a static build has no runtime environment).
-- **Search engines.** `sitemap.xml` uses absolute `https://www.siliconvalley-codecamp.com` URLs, and a `robots.txt` under `/svcc-site/` is ignored by crawlers, so search engines find the site at `pkellner.github.io/svcc-site/` only through links to it.
+- **Search engines.** `sitemap.xml`, canonical links and the social cards (`og:image`) all use absolute `https://siliconvalley-codecamp.com` URLs.

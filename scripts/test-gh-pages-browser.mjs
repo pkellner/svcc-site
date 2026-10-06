@@ -12,8 +12,8 @@ import path from "node:path";
 import { chromium } from "playwright";
 
 const OUT_DIR = path.resolve(import.meta.dirname, "..", "out");
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/svcc-site";
-const SITE_URL = process.env.GH_PAGES_URL || `https://pkellner.github.io${BASE_PATH}`;
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const SITE_URL = process.env.GH_PAGES_URL || `https://siliconvalley-codecamp.com${BASE_PATH}`;
 const ORIGIN = new URL(SITE_URL).origin;
 const SAMPLE = process.env.BROWSER_SAMPLE || "80";
 const CONCURRENCY = Number(process.env.BROWSER_CONCURRENCY || 4);

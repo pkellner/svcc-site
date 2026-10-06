@@ -1,18 +1,13 @@
 #!/usr/bin/env node
-// Pushes out/ to the gh-pages branch of this repo (pkellner/svcc-site). Two kinds
-// of build can be deployed, and the script refuses to mix them up:
-//   - `npm run build:gh-pages` (basePath /svcc-site), with PAGES_CNAME unset:
-//     the pkellner.github.io/svcc-site/ test site.
-//   - `npm run build:static` (no basePath), with PAGES_CNAME set to the custom
-//     domain (archive.siliconvalley-codecamp.com for staging, then
-//     www.siliconvalley-codecamp.com): writes out/CNAME. GitHub Pages reads the
-//     custom domain from that file on a branch-built site, so a deploy without
-//     it would drop the domain and take the site offline.
+// Pushes out/ to the gh-pages branch of this repo (pkellner/svcc-site), served by
+// GitHub Pages at https://siliconvalley-codecamp.com/. It writes out/CNAME every
+// time: GitHub Pages reads the custom domain from that file on a branch-built
+// site, so a deploy without it would drop the domain and take the site offline.
 // The git metadata for gh-pages lives in .gh-pages-git/ (not in out/, which
 // next build wipes) and is fetched from the remote first, so a redeploy only
 // uploads the files that changed instead of all ~475MB.
 import { execFileSync } from "node:child_process";
-import { copyFileSync, existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 // !!! DO NOT DEPLOY WITHOUT PETER'S SAY-SO !!!
@@ -33,18 +28,12 @@ if (!existsSync(path.join(OUT_DIR, "index.html"))) {
   process.exit(1);
 }
 
-const CNAME = process.env.PAGES_CNAME?.trim() ?? "";
-const isSubpathBuild = readFileSync(path.join(OUT_DIR, "index.html"), "utf8").includes("/svcc-site/_next/");
-if (CNAME && isSubpathBuild) {
-  console.error(`PAGES_CNAME=${CNAME} but out/ is a /svcc-site build -- run \`npm run build:static\` first`);
+const CNAME = process.env.PAGES_CNAME?.trim() || "siliconvalley-codecamp.com";
+if (readFileSync(path.join(OUT_DIR, "index.html"), "utf8").includes("/svcc-site/_next/")) {
+  console.error("out/ is a /svcc-site build, which breaks on the custom domain -- rebuild with NEXT_PUBLIC_BASE_PATH unset");
   process.exit(1);
 }
-if (!CNAME && !isSubpathBuild) {
-  console.error("out/ is a root (custom-domain) build but PAGES_CNAME is unset -- set PAGES_CNAME, or run `npm run build:gh-pages` for the test site");
-  process.exit(1);
-}
-if (CNAME) writeFileSync(path.join(OUT_DIR, "CNAME"), `${CNAME}\n`);
-else rmSync(path.join(OUT_DIR, "CNAME"), { force: true });
+writeFileSync(path.join(OUT_DIR, "CNAME"), `${CNAME}\n`);
 
 function git(args, { allowFail = false, quiet = false } = {}) {
   if (!quiet) console.log("  $ git", args.join(" "));
@@ -97,4 +86,4 @@ console.log(`  ${changedLines.length} files changed (${Object.entries(counts).ma
 git(["-c", "user.name=Peter Kellner", "-c", "user.email=peter@peterkellner.net", "commit", "-q", "-m", "Deploy SVCC site"]);
 git(["push", "origin", "HEAD:gh-pages"]);
 
-console.log(`Deployed. GitHub Pages rebuilds in a minute or two: ${CNAME ? `https://${CNAME}/` : "https://pkellner.github.io/svcc-site/"}`);
+console.log(`Deployed. GitHub Pages rebuilds in a minute or two: https://${CNAME}/`);

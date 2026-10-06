@@ -13,8 +13,8 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "out");
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "/svcc-site";
-const ORIGIN = BASE ? "https://pkellner.github.io" : "https://www.siliconvalley-codecamp.com";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const ORIGIN = "https://siliconvalley-codecamp.com";
 const SITE = ORIGIN + BASE;
 
 // Text in the data (bios, session descriptions, links) that really does say these words.

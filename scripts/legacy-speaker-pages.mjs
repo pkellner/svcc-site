@@ -21,7 +21,7 @@ const basePath = readFileSync(path.join(OUT_DIR, "index.html"), "utf8").match(/"
 const esc = (s) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 // Same origin and card URLs as src/lib/seo.ts, so a shared old link previews with the speaker's card. The
 // page is a redirect, so it is kept out of search results and points them at the speaker's page.
-const origin = basePath ? "https://pkellner.github.io" : "https://www.siliconvalley-codecamp.com";
+const origin = "https://siliconvalley-codecamp.com";
 const ogVersion = readFileSync(path.join(WEB_DIR, "src/lib/seo.ts"), "utf8").match(/OG_VERSION = "([^"]+)"/)?.[1];
 if (!ogVersion) throw new Error("legacy-speaker-pages: OG_VERSION not found in src/lib/seo.ts");
 

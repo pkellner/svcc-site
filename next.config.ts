@@ -34,9 +34,8 @@ import path from "node:path";
  * ];
  */
 
-// Set only for the pkellner.github.io/svcc-site/ project-pages test deploy
-// (unset for the eventual custom-domain production build, which serves from
-// the root). Next.js auto-prefixes next/link and next/image with this; the
+// Unset for the real build, which is served from the root of siliconvalley-codecamp.com;
+// set only to test the site under a subpath. Next.js auto-prefixes next/link and next/image with this; the
 // handful of hardcoded <img src="/..."> paths use withBasePath() instead.
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

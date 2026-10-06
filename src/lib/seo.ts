@@ -8,11 +8,10 @@ import { getAttendeeCountsByYear, getCodeCampYears, getCodeCampYearsWithSessions
 export const SITE_NAME = "Silicon Valley Code Camp";
 export const SITE_DESCRIPTION = "Silicon Valley Code Camp is a community event where developers learn from developers.";
 
-// Where the site is really served. The project-pages build (basePath /svcc-site) lives on github.io; a root
-// build is served from the custom domain.
-export const SITE_ORIGIN = process.env.NEXT_PUBLIC_BASE_PATH ? "https://pkellner.github.io" : "https://www.siliconvalley-codecamp.com";
+// Where the site is served: GitHub Pages on the custom domain (the CNAME the deploy writes).
+export const SITE_ORIGIN = "https://siliconvalley-codecamp.com";
 
-/** Absolute URL of a site path ("/session/2019/" -> "https://.../svcc-site/session/2019/"). */
+/** Absolute URL of a site path ("/session/2019/" -> "https://siliconvalley-codecamp.com/session/2019/"). */
 export function absUrl(path: string): string {
   return SITE_ORIGIN + withBasePath(path);
 }

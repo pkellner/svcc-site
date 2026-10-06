@@ -20,8 +20,8 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 
 const OUT_DIR = path.resolve(import.meta.dirname, "..", "out");
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/svcc-site";
-const SITE_URL = process.env.GH_PAGES_URL || `https://pkellner.github.io${BASE_PATH}`;
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const SITE_URL = process.env.GH_PAGES_URL || `https://siliconvalley-codecamp.com${BASE_PATH}`;
 const ORIGIN = new URL(SITE_URL).origin;
 const CONCURRENCY = Number(process.env.TEST_CONCURRENCY || 16);
 const ORIGINAL_URL = process.env.ORIGINAL_URL || "https://www.siliconvalley-codecamp.com";

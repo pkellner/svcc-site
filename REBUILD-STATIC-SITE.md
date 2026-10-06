@@ -5,7 +5,7 @@ How to change the site and publish it. Everything runs from the root of branch `
 | | |
 |---|---|
 | Data and source | `pkellner/svcc-site`, branch `main` |
-| Published site | https://pkellner.github.io/svcc-site/ (branch `gh-pages`) |
+| Published site | https://siliconvalley-codecamp.com/ (branch `gh-pages`) |
 
 ## 0. One-time setup
 
@@ -28,12 +28,12 @@ For code changes, run `npm run typecheck` too.
 ## 2. Build
 
 ```bash
-npm run build:gh-pages     # for https://pkellner.github.io/svcc-site/ (served under /svcc-site/)
+npm run build:gh-pages     # for https://siliconvalley-codecamp.com/ (served from the root)
 ```
 
 This writes `out/` (about 3,900 pages, 21,000 files, about 475 MB), runs `scripts/prune-out.sh` to remove files that must never be published, and adds 20 forwarding pages for speaker addresses the original sitemap spelled differently (`scripts/legacy-speaker-urls.json`).
 
-`npm run build:static` is a root build for a custom domain. It is not used (decided 2026-10-05), and its deploy needs `PAGES_CNAME`. The base path is compiled in, so use the build that matches where you deploy.
+`npm run build:static` is the same build. The site moved to the custom domain on 2026-10-06; the old `pkellner.github.io/svcc-site/` test address is gone, and the deploy refuses a `/svcc-site` build.
 
 ## 3. Check before deploying
 

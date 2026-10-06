@@ -11,7 +11,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const OUT = path.join(ROOT, "out");
 const DEST = process.env.OG_OUT ? path.resolve(process.env.OG_OUT) : path.join(ROOT, "public/images/og-svcc.jpg");
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "/svcc-site";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".json": "application/json", ".txt": "text/plain" };
 
