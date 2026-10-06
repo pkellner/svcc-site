@@ -1,3 +1,11 @@
+> # ⚠️ DO NOT DEPLOY OR PUSH TO `pkellner/svcc-site` FROM THIS BRANCH ⚠️
+>
+> Peter edits `pkellner/svcc-site` (the live GitHub Pages site) **directly**. Running `npm run deploy:gh-pages` /
+> `scripts/deploy-gh-pages.mjs` from here would **overwrite those changes**. The deploy script refuses to run unless
+> `ALLOW_SVCC_SITE_DEPLOY=1` is set, and that should only be set when Peter says so in a prompt.
+>
+> Likewise, branch `github-pages-no-auth` must **not be merged into `main`** unless Peter explicitly says so.
+
 # Silicon Valley Code Camp: static, read-only archive
 
 An archive of the Silicon Valley Code Camp (SVCC) website: every year from 2006 to 2019 plus the three "campfire" events, about 3,900 pages covering 2,013 sessions, 930 speakers, tracks, sponsors and news. It is plain HTML, CSS and JavaScript files. There is no database, no server and no login.
